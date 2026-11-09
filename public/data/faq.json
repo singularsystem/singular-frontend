@@ -1,0 +1,828 @@
+{
+  "titulo": "Central de ajuda do IPAAGS AEE",
+  "versao": "1.0",
+  "atualizado_em": "2026-09-21",
+  "guia_rapido": [
+    {
+      "passo": "Atualize a página",
+      "detalhe": "Pressione F5. Se ainda estiver estranho, use Ctrl + F5."
+    },
+    {
+      "passo": "Saia e entre novamente",
+      "detalhe": "Feche a sessão no sistema e faça login de novo."
+    },
+    {
+      "passo": "Teste outro navegador ou aparelho",
+      "detalhe": "Use Chrome ou Edge atualizado, ou o celular."
+    },
+    {
+      "passo": "Reinicie o roteador e o computador",
+      "detalhe": "Desligue o roteador por 30 segundos e reinicie o computador."
+    },
+    {
+      "passo": "Confira o seu cadastro",
+      "detalhe": "Em Meu perfil, veja se estado, município e escola estão corretos."
+    }
+  ],
+  "modelo_de_chamado": "Município: \nPerfil (professor, psicólogo, psicopedagogo, assistente social, secretaria, administrador): \nE-mail de acesso (nunca envie a senha): \nAluno (iniciais e número de cadastro, sem diagnóstico): \nTela ou relatório onde ocorreu: \nData e horário: \nO que você tentou fazer: \nMensagem de erro exata (copie o texto): \nJá tentei: atualizar a página, sair e entrar, outro navegador/aparelho, reiniciar o roteador (sim/não): \nAnexe print ou vídeo curto com áudio.",
+  "categorias": [
+    {
+      "id": "assinatura",
+      "titulo": "Assinar documentos"
+    },
+    {
+      "id": "acesso",
+      "titulo": "Entrar no sistema"
+    },
+    {
+      "id": "alunos",
+      "titulo": "Alunos e relatórios que não aparecem"
+    },
+    {
+      "id": "relatorios",
+      "titulo": "Preencher, editar e excluir"
+    },
+    {
+      "id": "escalas",
+      "titulo": "Escalas, diagnósticos e conclusões"
+    },
+    {
+      "id": "dashboard",
+      "titulo": "Dashboard e Relatório Geral AEE"
+    },
+    {
+      "id": "cadastros",
+      "titulo": "Cadastros de usuários, escolas e alunos"
+    },
+    {
+      "id": "pdf",
+      "titulo": "PDF e download"
+    },
+    {
+      "id": "ajuda",
+      "titulo": "Como pedir ajuda"
+    }
+  ],
+  "perguntas": [
+    {
+      "id": "ass-01",
+      "categoria": "assinatura",
+      "pergunta": "Quando aparece o botão \"Assinar\" no meu relatório?",
+      "introducao": "O botão só aparece quando o documento está pronto: todas as partes obrigatórias preenchidas e salvas.",
+      "passos": [
+        "Abra o relatório do aluno e veja o status no alto da tela.",
+        "Em andamento: ainda falta preencher alguma parte. Ainda não dá para assinar.",
+        "Concluído: tudo preenchido. O botão Assinar aparece dentro do sistema. Clique nele.",
+        "Assinado: todos os profissionais já assinaram."
+      ],
+      "bom_saber": "No Relatório Biopsicossocial, o documento só fica pronto depois que psicólogo, psicopedagogo e assistente social terminam a sua parte. O estudo de caso é a união da triagem com o questionário do aluno. O PAEE é assinado por quem o criou.",
+      "se_nao_resolver": "",
+      "palavras_chave": "botão assinar liberar aparece status concluído andamento",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "ass-02",
+      "categoria": "assinatura",
+      "pergunta": "O relatório está \"Em andamento\" e não aparece o botão para assinar. O que falta?",
+      "introducao": "Quando não aparece o botão, é porque alguma parte obrigatória ainda não foi preenchida ou salva por algum dos profissionais.",
+      "passos": [
+        "Abra o relatório do aluno e confira as seções de Psicologia, Psicopedagogia e Serviço Social.",
+        "Veja qual delas está pendente. Faltas comuns: na Psicologia, o questionário, a escala SNAP-IV e a escala adaptativa; na Psicopedagogia, o questionário, a escala CARS ou M-CHAT e a escala de funcionamento intelectual; no Serviço Social, o relatório social.",
+        "Avise o profissional da parte pendente para preencher e clicar em Salvar.",
+        "Quando a última parte for salva, o sistema gera o documento sozinho e o botão Assinar aparece para todos."
+      ],
+      "bom_saber": "As escalas adaptativa e de funcionamento intelectual só aparecem para crianças com 6 anos ou mais. Não assine por links de e-mails antigos enquanto o relatório estiver em andamento.",
+      "se_nao_resolver": "Se todas as partes estão preenchidas e o botão não aparece, abra um chamado com o nome do aluno (iniciais e número) e o município.",
+      "palavras_chave": "falta preencher pendente escala snap cars m-chat em andamento não consigo assinar",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "ass-03",
+      "categoria": "assinatura",
+      "pergunta": "Recebi vários e-mails para assinar o mesmo documento. Qual devo usar?",
+      "introducao": "Assine sempre pelo botão **Assinar** dentro do sistema IPAAGS. Links de e-mails antigos foram descartados e não valem.",
+      "passos": [
+        "Entre no sistema IPAAGS com o seu login.",
+        "Abra o relatório do aluno.",
+        "Clique em Assinar e conclua a assinatura.",
+        "Ignore os e-mails anteriores. Não é preciso apagar nem responder."
+      ],
+      "bom_saber": "Se o relatório aparece como Em andamento, não assine por e-mail: complete o que falta primeiro.",
+      "se_nao_resolver": "",
+      "palavras_chave": "vários e-mails link antigo assinar de novo zapsign duplicado",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "ass-04",
+      "categoria": "assinatura",
+      "pergunta": "Assinei, mas o sistema continua mostrando \"não assinado\" ou \"em andamento\".",
+      "introducao": "Isso costuma ter uma destas causas: assinatura feita em link de e-mail antigo, falta a assinatura de outro profissional, ou a tela está desatualizada.",
+      "passos": [
+        "Saia do sistema e entre novamente (ou atualize a página com F5).",
+        "Abra o relatório e confira quem já assinou. O status só vira Assinado quando todos os profissionais assinam.",
+        "Se você assinou por um e-mail antigo, assine de novo pelo botão Assinar do sistema."
+      ],
+      "bom_saber": "",
+      "se_nao_resolver": "Se todos assinaram e continua errado, abra um chamado com aluno, quem assinou, dia e horário.",
+      "palavras_chave": "assinado não consta assinatura não aparece status não atualiza",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "ass-05",
+      "categoria": "assinatura",
+      "pergunta": "A tela trava ou dá erro quando clico em \"Finalizar\" na assinatura.",
+      "introducao": "",
+      "passos": [
+        "Confira o CPF digitado: somente números, sem espaço no começo ou no fim e sem letras.",
+        "Use o Google Chrome ou o Microsoft Edge atualizado e libere os pop-ups do site.",
+        "Feche a aba, abra o sistema novamente e tente outra vez.",
+        "Se possível, teste em outro aparelho (por exemplo, o celular)."
+      ],
+      "bom_saber": "",
+      "se_nao_resolver": "Se continuar travando, abra um chamado com print da tela e o navegador que você usa.",
+      "palavras_chave": "finalizar trava erro cpf tela branca assinatura link",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "ass-06",
+      "categoria": "assinatura",
+      "pergunta": "O código de verificação não chega no meu e-mail.",
+      "introducao": "O código é uma segurança da plataforma de assinatura. Ele é enviado ao e-mail do seu cadastro.",
+      "passos": [
+        "Aguarde alguns minutos e olhe a caixa de Spam ou Lixo eletrônico e a aba Promoções.",
+        "Em Meu perfil, confira se o e-mail cadastrado está correto.",
+        "Peça um novo código."
+      ],
+      "bom_saber": "",
+      "se_nao_resolver": "Se o código não chegar, abra um chamado informando o e-mail cadastrado e o horário da tentativa.",
+      "palavras_chave": "código verificação e-mail não chega sms assinatura",
+      "confirmar_antes_de_publicar": true
+    },
+    {
+      "id": "ass-07",
+      "categoria": "assinatura",
+      "pergunta": "O prazo para assinar venceu. E agora?",
+      "introducao": "Cada documento tem um prazo para ser assinado (no estudo de caso, 30 dias). Depois disso o documento não pode mais ser assinado.",
+      "passos": [
+        "Não tente assinar pelo link do e-mail: ele não funciona mais.",
+        "Fale com a sua coordenação. A orientação é que os prazos não sejam prorrogados e que o documento seja refeito.",
+        "Para evitar que aconteça de novo, assine assim que o status ficar Concluído."
+      ],
+      "bom_saber": "",
+      "se_nao_resolver": "Em casos excepcionais, a coordenação pode pedir ao suporte a reabertura do documento.",
+      "palavras_chave": "prazo vencido expirou 30 dias 7 dias expirar assinatura",
+      "confirmar_antes_de_publicar": true
+    },
+    {
+      "id": "ass-08",
+      "categoria": "assinatura",
+      "pergunta": "Aparece o nome ou o e-mail de outro profissional na hora de assinar.",
+      "introducao": "Cada profissional deve entrar com o seu próprio login e preencher a sua própria parte. Relatórios antigos (criados antes de julho de 2026) podiam ficar com o responsável trocado ou repetido. Nos novos isso foi corrigido.",
+      "passos": [
+        "Em Meu perfil, confirme que você está logado com o seu usuário.",
+        "Confira se a sua parte do relatório foi preenchida por você.",
+        "Se o documento é antigo, informe no chamado o aluno, o profissional que deveria assinar e o nome que apareceu."
+      ],
+      "bom_saber": "Não compartilhe login entre profissionais: a assinatura é vinculada a quem preencheu.",
+      "se_nao_resolver": "",
+      "palavras_chave": "nome errado outro profissional duplicado responsável trocado assinar",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "ass-09",
+      "categoria": "assinatura",
+      "pergunta": "Por que o PAEE aparece para outra professora assinar?",
+      "introducao": "O PAEE é assinado por **quem criou** o documento. Se outra pessoa criou e o professor apenas preencheu depois, a assinatura continua com quem criou.",
+      "passos": [
+        "Confira em qual aba você está. PAEE e PEI têm telas parecidas e é comum confundir.",
+        "Se o PAEE ainda não foi assinado, peça ao suporte para trocar o responsável para o seu nome.",
+        "Outra opção: peça a um administrador para excluir o PAEE e crie um novo pelo seu login (copie o conteúdo antes)."
+      ],
+      "bom_saber": "",
+      "se_nao_resolver": "",
+      "palavras_chave": "paee assina quem criou professor titular aee assinatura pei",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "ass-10",
+      "categoria": "assinatura",
+      "pergunta": "Corrigi um relatório já assinado. Preciso assinar de novo?",
+      "introducao": "Sim. Ao editar um documento assinado, a assinatura anterior é cancelada e o sistema gera um novo documento para assinar.",
+      "passos": [
+        "Revise tudo antes de salvar, para corrigir de uma vez só.",
+        "Salve. O sistema gera a nova versão.",
+        "Todos os profissionais assinam a nova versão pelo botão Assinar."
+      ],
+      "bom_saber": "",
+      "se_nao_resolver": "",
+      "palavras_chave": "editar assinado reassinar de novo cancelar assinatura corrigir",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "ace-01",
+      "categoria": "acesso",
+      "pergunta": "O sistema diz \"senha incorreta\", mas tenho certeza de que está certa.",
+      "introducao": "Após 5 tentativas erradas, a conta é bloqueada por cerca de 15 minutos. Durante o bloqueio, aparece a mesma mensagem de senha incorreta.",
+      "passos": [
+        "Pare de tentar e aguarde 15 minutos.",
+        "Tente de novo com calma, conferindo maiúsculas, minúsculas e o teclado.",
+        "Se precisar entrar agora, peça ao secretário ou administrador do seu município para redefinir a sua senha. A redefinição também destrava a conta.",
+        "No primeiro acesso, troque a senha quando o sistema pedir."
+      ],
+      "bom_saber": "",
+      "se_nao_resolver": "Se o erro voltar mesmo depois da redefinição, abra um chamado informando o e-mail de acesso (nunca a senha).",
+      "palavras_chave": "senha incorreta bloqueada bloqueio login não entra redefinir",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "ace-02",
+      "categoria": "acesso",
+      "pergunta": "O link de \"esqueci a senha\" abre só a tela de login.",
+      "introducao": "O link de redefinição só pode ser usado uma vez. Alguns provedores de e-mail o \"abrem\" antes de você, para verificar segurança, e ele deixa de funcionar.",
+      "passos": [
+        "Peça um novo link e clique nele uma única vez, direto no e-mail.",
+        "Se abrir de novo a tela de login, peça ao secretário ou administrador para redefinir a sua senha."
+      ],
+      "bom_saber": "",
+      "se_nao_resolver": "",
+      "palavras_chave": "esqueci senha link redefinição não funciona login e-mail",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "ace-03",
+      "categoria": "acesso",
+      "pergunta": "O sistema não abre, fica com tela branca ou não carrega.",
+      "introducao": "Na maioria dos casos o problema está na conexão local ou em informações antigas guardadas no navegador. Siga a ordem abaixo.",
+      "passos": [
+        "Atualize a página com F5.",
+        "Saia do sistema e entre novamente.",
+        "Desligue o roteador por 30 segundos, ligue de novo e reinicie o computador.",
+        "Teste em outro aparelho ou no celular com dados móveis. Se abrir lá, o problema é a rede da escola ou secretaria: acione o responsável pela internet.",
+        "Se não abre em nenhum aparelho e rede, avise o suporte informando município e horário. Pode ser uma instabilidade geral."
+      ],
+      "bom_saber": "",
+      "se_nao_resolver": "",
+      "palavras_chave": "não abre tela branca não carrega fora do ar lento internet roteador travado",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "ace-04",
+      "categoria": "acesso",
+      "pergunta": "Apareceu \"Application error\" ou \"client-side exception\".",
+      "introducao": "",
+      "passos": [
+        "Atualize a página (F5).",
+        "Saia e entre novamente no sistema.",
+        "Se o erro aparece só em uma tela ou em um aluno específico, anote qual é."
+      ],
+      "bom_saber": "",
+      "se_nao_resolver": "Se continuar, abra um chamado com print da mensagem, a tela onde ocorreu e o aluno (iniciais e número).",
+      "palavras_chave": "application error erro client-side exception tela erro",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "ace-05",
+      "categoria": "acesso",
+      "pergunta": "O sistema me desconectou sozinho, ou deu erro ao abrir ou imprimir um relatório.",
+      "introducao": "O login expira depois de um tempo sem uso. Ao tentar abrir um relatório com o login expirado, o sistema mostra erro.",
+      "passos": [
+        "Saia do sistema e entre novamente.",
+        "Abra o relatório de novo.",
+        "Para não perder o que digitou, salve com frequência e não deixe a tela parada por muito tempo."
+      ],
+      "bom_saber": "",
+      "se_nao_resolver": "",
+      "palavras_chave": "desconectou sessão expirou deslogou erro imprimir sair sozinho",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "ace-06",
+      "categoria": "acesso",
+      "pergunta": "Depois de uma atualização, a tela dá erro ou mostra informações antigas.",
+      "introducao": "Quando o sistema é atualizado, quem estava com ele aberto precisa recarregar.",
+      "passos": [
+        "Feche a aba (ou o navegador) e abra o sistema novamente.",
+        "Se ainda estiver estranho, pressione Ctrl + F5.",
+        "Saia e entre novamente."
+      ],
+      "bom_saber": "",
+      "se_nao_resolver": "",
+      "palavras_chave": "atualização versão nova tela antiga erro depois atualizar recarregar cache",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "ace-07",
+      "categoria": "acesso",
+      "pergunta": "Quais são os requisitos mínimos para usar o sistema?",
+      "introducao": "",
+      "passos": [
+        "Navegador: Google Chrome ou Microsoft Edge, atualizado, com JavaScript e pop-ups liberados.",
+        "Internet: conexão estável de pelo menos 10 Mbps por unidade (recomendado de 2 a 5 Mbps por usuário ao mesmo tempo).",
+        "Computador: ao menos 4 GB de memória (recomendado 8 GB) e tela de 1366 x 768 ou maior.",
+        "Certificado digital: não é necessário."
+      ],
+      "bom_saber": "",
+      "se_nao_resolver": "",
+      "palavras_chave": "requisitos mínimos navegador chrome edge internet computador memória",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "alu-01",
+      "categoria": "alunos",
+      "pergunta": "Não vejo nenhum aluno, ou aparece \"Sem permissão para acessar este aluno\".",
+      "introducao": "Você vê os alunos do município em que está cadastrado. Se o estado ou o município do seu cadastro estiver vazio ou errado, nada aparece.",
+      "passos": [
+        "Abra Meu perfil e confira o estado e o município.",
+        "Se estiverem vazios ou errados, peça ao secretário ou administrador para corrigir em Cadastro de usuários.",
+        "Depois da correção, saia do sistema e entre novamente."
+      ],
+      "bom_saber": "",
+      "se_nao_resolver": "Se continuar sem acesso, abra um chamado com o e-mail de acesso e o município.",
+      "palavras_chave": "não vejo alunos sem permissão permissão município estado perfil lista vazia professor",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "alu-02",
+      "categoria": "alunos",
+      "pergunta": "Quais alunos e relatórios cada profissional pode ver, editar e excluir?",
+      "introducao": "",
+      "passos": [
+        "Ver: todos os profissionais do município veem os alunos e relatórios daquele município. Não é preciso estar vinculado à escola.",
+        "Editar e excluir: somente quem criou o relatório.",
+        "Mais de um município: quem trabalha em dois municípios usa um login para cada município.",
+        "Quem cria o Relatório Biopsicossocial: psicólogo, psicopedagogo e assistente social. O professor preenche triagem, questionário e os planos do seu perfil."
+      ],
+      "bom_saber": "",
+      "se_nao_resolver": "",
+      "palavras_chave": "quem pode ver editar excluir permissões perfis regras município escola professor",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "alu-03",
+      "categoria": "alunos",
+      "pergunta": "Um aluno não aparece na lista. O que verificar?",
+      "introducao": "",
+      "passos": [
+        "Limpe os filtros (município, escola, ano, mês e status).",
+        "Busque pelo nome completo e com acentos.",
+        "Confirme se a secretaria já cadastrou o aluno.",
+        "Veja se o relatório já foi criado. Sem relatório, o aluno não aparece nessa tela.",
+        "Se existem duas escolas com o mesmo nome nos filtros, teste as duas.",
+        "Se um aluno sumiu depois de uma exclusão, ele pode ter sido desativado. Os dados continuam guardados: peça a reativação ao suporte."
+      ],
+      "bom_saber": "",
+      "se_nao_resolver": "Se nada resolver, abra um chamado com as iniciais e o número do aluno, a escola e o município.",
+      "palavras_chave": "aluno não aparece sumiu lista busca filtro desativado excluído escola duplicada",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "alu-04",
+      "categoria": "alunos",
+      "pergunta": "O estudo de caso aparece \"Incompleto\" com um traço (-). O que fazer?",
+      "introducao": "O estudo de caso é a união da **triagem** com o **questionário** do aluno. O traço indica que falta um dos dois.",
+      "passos": [
+        "O professor abre o menu Triagens e o menu Questionários e localiza o aluno.",
+        "Preenche e salva os dois documentos.",
+        "O estudo de caso é gerado automaticamente."
+      ],
+      "bom_saber": "O estudo de caso não é preenchido nessa tela: ele só mostra o andamento.",
+      "se_nao_resolver": "",
+      "palavras_chave": "estudo de caso incompleto traço triagem questionário professor não aparece",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "alu-05",
+      "categoria": "alunos",
+      "pergunta": "Por que a aba AEE não mostra o aluno?",
+      "introducao": "O aluno passa a ser AEE de forma automática, depois que os três profissionais concluem a avaliação. A secretaria cadastra o aluno sem marcar AEE, e ninguém marca isso manualmente.",
+      "passos": [
+        "Confira se psicólogo, psicopedagogo e assistente social já concluíram os relatórios do aluno.",
+        "Conferido isso, o aluno aparece para o professor de AEE trabalhar o PAEE."
+      ],
+      "bom_saber": "",
+      "se_nao_resolver": "",
+      "palavras_chave": "aba aee vazia aluno aee não aparece classificação paee professor aee",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "alu-06",
+      "categoria": "alunos",
+      "pergunta": "Não aparece a escala ou o questionário para uma criança pequena.",
+      "introducao": "Isso é esperado. A escala adaptativa (psicólogo) e a de funcionamento intelectual (psicopedagogo) só são exibidas para crianças com **6 anos completos ou mais**.",
+      "passos": [
+        "Para menores de 6 anos, preencha apenas as escalas e os questionários que aparecem na tela."
+      ],
+      "bom_saber": "",
+      "se_nao_resolver": "",
+      "palavras_chave": "criança pequena menor de 6 anos escala não aparece deficiência intelectual questionário",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "alu-07",
+      "categoria": "alunos",
+      "pergunta": "Sou professor e não consigo criar o Relatório Biopsicossocial. É erro?",
+      "introducao": "Não é erro. Esse relatório é criado por psicólogo, psicopedagogo e assistente social.",
+      "passos": [
+        "O professor preenche a triagem e o questionário (estudo de caso).",
+        "Ele também pode ver os relatórios do município, mas não criar nem editar os de outros profissionais."
+      ],
+      "bom_saber": "",
+      "se_nao_resolver": "",
+      "palavras_chave": "professor criar relatório biopsicossocial não consigo criar permissão",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "alu-08",
+      "categoria": "alunos",
+      "pergunta": "Meu Dashboard aparece zerado (diretor ou coordenador).",
+      "introducao": "O Dashboard mostra os dados conforme o município e a escola do seu cadastro. Se o vínculo estiver faltando, os números aparecem zerados.",
+      "passos": [
+        "Peça ao secretário ou administrador para conferir o município e a escola no seu cadastro.",
+        "Depois da correção, saia e entre novamente.",
+        "Confira também os filtros de município e período no alto do Dashboard."
+      ],
+      "bom_saber": "",
+      "se_nao_resolver": "Se continuar zerado, abra um chamado com o e-mail de acesso e o município.",
+      "palavras_chave": "dashboard zerado vazio diretor coordenador sem dados escola vínculo",
+      "confirmar_antes_de_publicar": true
+    },
+    {
+      "id": "rel-01",
+      "categoria": "relatorios",
+      "pergunta": "Como edito um relatório que já foi concluído?",
+      "introducao": "",
+      "passos": [
+        "Abra a lista de relatórios e localize o aluno.",
+        "Clique no ícone de lápis (Editar).",
+        "Faça os ajustes e clique em Salvar."
+      ],
+      "bom_saber": "Só quem criou o relatório pode editá-lo. Se o documento já estava assinado, a assinatura anterior é cancelada e todos assinam de novo a nova versão.",
+      "se_nao_resolver": "",
+      "palavras_chave": "editar relatório concluído corrigir lápis alterar",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "rel-02",
+      "categoria": "relatorios",
+      "pergunta": "Como corrijo uma triagem, um questionário ou um estudo de caso já salvo?",
+      "introducao": "",
+      "passos": [
+        "Abra Triagens ou Questionários e localize o aluno.",
+        "Clique em Editar, corrija as respostas e salve."
+      ],
+      "bom_saber": "",
+      "se_nao_resolver": "Se algum campo não deixa alterar (por exemplo, não desmarca uma resposta), abra um chamado com print do campo.",
+      "palavras_chave": "corrigir triagem questionário estudo de caso editar desmarcar resposta",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "rel-03",
+      "categoria": "relatorios",
+      "pergunta": "Como excluo um PAEE ou relatório que já foi assinado?",
+      "introducao": "Por segurança, o professor não consegue excluir um documento já assinado.",
+      "passos": [
+        "Opção 1 (mais simples): clique em Editar, corrija o que estava errado e salve. A assinatura anterior é cancelada e você assina a nova versão.",
+        "Opção 2: peça a um administrador para excluir o documento. Antes, copie o conteúdo que quiser reaproveitar.",
+        "Depois de excluir, o novo documento precisará ser assinado."
+      ],
+      "bom_saber": "",
+      "se_nao_resolver": "",
+      "palavras_chave": "excluir paee assinado apagar relatório assinado não consigo excluir administrador",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "rel-04",
+      "categoria": "relatorios",
+      "pergunta": "O sistema não deixa salvar porque \"já existe relatório\" para o aluno.",
+      "introducao": "Isso acontece quando dois profissionais abrem o relatório do mesmo aluno ao mesmo tempo e o sistema cria dois relatórios.",
+      "passos": [
+        "Copie para o Bloco de Notas ou Word tudo o que você digitou. Anote também o que marcou.",
+        "Saia da tela sem insistir em salvar.",
+        "Abra o perfil do aluno e a aba Relatórios. Deve existir um único relatório.",
+        "Clique em Editar na sua seção, cole o que copiou e salve."
+      ],
+      "bom_saber": "",
+      "se_nao_resolver": "Se aparecerem dois relatórios do mesmo aluno, abra um chamado pedindo para unir. Informe o aluno e os profissionais envolvidos.",
+      "palavras_chave": "já existe relatório duplicado não consigo salvar dois relatórios mesmo aluno mesclar",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "rel-05",
+      "categoria": "relatorios",
+      "pergunta": "Um campo não aceita o que digitei (por exemplo, a vírgula).",
+      "introducao": "",
+      "passos": [
+        "Remova a vírgula ou caracteres especiais e escreva o texto de forma simples.",
+        "Confira se algum campo obrigatório está marcado em vermelho ou vazio.",
+        "Tente salvar novamente."
+      ],
+      "bom_saber": "",
+      "se_nao_resolver": "Se continuar, abra um chamado com print do campo e do texto digitado.",
+      "palavras_chave": "campo não aceita vírgula caractere especial erro salvar validação",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "rel-06",
+      "categoria": "relatorios",
+      "pergunta": "Como evitar perder o que digitei?",
+      "introducao": "",
+      "passos": [
+        "Salve com frequência, sobretudo em campos de texto longos.",
+        "Escreva textos longos antes no Bloco de Notas ou Word e depois cole no sistema.",
+        "Não deixe a tela parada por muito tempo: o login expira.",
+        "Se aparecer um erro ao salvar, não feche a página: copie o texto antes de sair."
+      ],
+      "bom_saber": "",
+      "se_nao_resolver": "",
+      "palavras_chave": "perdi texto perder dados salvar sessão expirar dica backup",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "esc-01",
+      "categoria": "escalas",
+      "pergunta": "Quando o sistema marca \"Deficiência intelectual (DI)\" para um aluno?",
+      "introducao": "A DI é marcada **automaticamente** e não pode ser marcada à mão. É preciso que as duas escalas estejam alteradas e que o aluno tenha 6 anos ou mais.",
+      "passos": [
+        "Escala adaptativa (psicólogo): resultado alterado (11 pontos ou menos, conforme o critério em vigor).",
+        "Escala de funcionamento intelectual (psicopedagogo): desempenho abaixo de 55%.",
+        "Somente com as duas alteradas o aluno passa a contar como DI no Dashboard e nos filtros."
+      ],
+      "bom_saber": "Em julho de 2026 os critérios foram revisados. Alunos que não tinham as duas escalas alteradas deixaram de constar como DI.",
+      "se_nao_resolver": "",
+      "palavras_chave": "deficiência intelectual di critério ponto de corte escala adaptativa cognitiva 55 marcar",
+      "confirmar_antes_de_publicar": true
+    },
+    {
+      "id": "esc-02",
+      "categoria": "escalas",
+      "pergunta": "Quando o sistema marca \"TEA\" (autismo)?",
+      "introducao": "O TEA é marcado **automaticamente** quando o teste de autismo (CARS ou M-CHAT) do psicopedagogo tem pontuação positiva. Não é preciso marcar a caixa à mão.",
+      "passos": [
+        "Preencha e salve a escala CARS ou M-CHAT.",
+        "Se a pontuação for positiva, o aluno passa a aparecer nos filtros de TEA e no Dashboard."
+      ],
+      "bom_saber": "PDFs já assinados antes da correção de julho de 2026 não mudam. A informação aparece nos filtros e no Dashboard.",
+      "se_nao_resolver": "",
+      "palavras_chave": "tea autismo cars m-chat marcar automático filtro aparece",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "esc-03",
+      "categoria": "escalas",
+      "pergunta": "Para que servem o SNAP-IV, o CARS, o M-CHAT e as demais escalas?",
+      "introducao": "",
+      "passos": [
+        "SNAP-IV: rastreio de TDAH, com 18 itens de desatenção e hiperatividade/impulsividade.",
+        "CARS: escala de 15 itens que avalia a presença e a intensidade de características do TEA.",
+        "M-CHAT: rastreio precoce de sinais de TEA em crianças pequenas (16 a 30 meses).",
+        "Escala de funcionamento intelectual: 10 itens sobre o funcionamento cognitivo geral.",
+        "Questionário psicopedagógico: investiga o perfil de aprendizagem e fatores que interferem no desempenho escolar."
+      ],
+      "bom_saber": "",
+      "se_nao_resolver": "",
+      "palavras_chave": "snap cars m-chat escala para que serve tdah tea questionário psicopedagógico",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "esc-04",
+      "categoria": "escalas",
+      "pergunta": "O texto de uma escala ou da conclusão parece trocado (por exemplo, CARS descrito como TDAH).",
+      "introducao": "As descrições das escalas foram corrigidas em agosto de 2026. Relatórios gerados ou assinados antes disso podem ter o texto antigo.",
+      "passos": [
+        "Anote o aluno, o relatório e o trecho que está errado.",
+        "Se o documento ainda não foi assinado, avise o suporte antes de assinar.",
+        "Se já foi assinado, o PDF assinado não pode ser alterado. O suporte orienta como proceder."
+      ],
+      "bom_saber": "",
+      "se_nao_resolver": "Abra um chamado com print do trecho, o nome do relatório e as iniciais do aluno.",
+      "palavras_chave": "texto errado conclusão trocada snap tdah cars descrição escala divergente",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "esc-05",
+      "categoria": "escalas",
+      "pergunta": "Um aluno mudou de diagnóstico ou deixou de aparecer nos filtros. Por quê?",
+      "introducao": "",
+      "passos": [
+        "As regras de DI e TEA passaram a ser automáticas, com base nas escalas preenchidas.",
+        "Confira se as escalas do aluno estão preenchidas e salvas.",
+        "Confira os filtros de município, escola e período no Relatório Geral AEE.",
+      ],
+      "bom_saber": "",
+      "se_nao_resolver": "Se o aluno tem escala positiva e mesmo assim não aparece, abra um chamado com as iniciais e o número do aluno, a escola e o município.",
+      "palavras_chave": "diagnóstico mudou sumiu filtro relatório geral aee deficiência aluno não aparece di tea",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "das-01",
+      "categoria": "dashboard",
+      "pergunta": "O que significam \"Concluído\", \"Assinado\" e \"Em andamento\"?",
+      "introducao": "",
+      "passos": [
+        "Em andamento: o relatório foi iniciado, mas ainda não foi finalizado nem assinado.",
+        "Concluído: o relatório foi finalizado por todos e aguarda assinatura.",
+        "Assinado: finalizado e assinado por todos os profissionais."
+      ],
+      "bom_saber": "Os números do alto do Dashboard contam relatórios completos (com os três profissionais). Os números por profissional contam as partes de cada um. São dois totais diferentes.",
+      "se_nao_resolver": "",
+      "palavras_chave": "concluído assinado andamento significado status dashboard números profissional",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "das-02",
+      "categoria": "dashboard",
+      "pergunta": "Por que o Dashboard mostra um número diferente do Relatório Geral AEE?",
+      "introducao": "As duas telas respondem a perguntas diferentes: o Dashboard mostra o **total acumulado** desde o início até o período escolhido; o Relatório Geral AEE mostra o que foi registrado **no período** escolhido.",
+      "passos": [
+        "Compare as duas telas com os mesmos filtros: município, escola e período.",
+        "Ao filtrar um mês no Dashboard, ele mostra o total acumulado até o fim daquele mês.",
+        "Para ver só os casos novos de um mês, use o Relatório Geral AEE com o filtro daquele mês."
+      ],
+      "bom_saber": "",
+      "se_nao_resolver": "Se, com os mesmos filtros, os números continuarem diferentes, abra um chamado com prints das duas telas e os filtros usados.",
+      "palavras_chave": "dashboard diferente relatório geral aee números não batem divergente total acumulado mês",
+      "confirmar_antes_de_publicar": true
+    },
+    {
+      "id": "das-03",
+      "categoria": "dashboard",
+      "pergunta": "O card \"Total de alunos do município\" está zerado.",
+      "introducao": "Esse número não é calculado sozinho: ele é informado à mão. Serve como meta para calcular a cobertura.",
+      "passos": [
+        "O secretário ou o administrador informa o total de alunos do município.",
+        "O secretário só consegue informar o total do município a que está vinculado. Se filtrar outro município, aparecerá um erro.",
+        "Depois de salvar, o card mostra o total e o Dashboard calcula a porcentagem de alunos já cadastrados."
+      ],
+      "bom_saber": "",
+      "se_nao_resolver": "",
+      "palavras_chave": "total de alunos município zerado card cobertura secretário administrador informar",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "das-04",
+      "categoria": "dashboard",
+      "pergunta": "Como vejo só os relatórios completos, incompletos ou quem está pendente?",
+      "introducao": "",
+      "passos": [
+        "Estudos de caso: use o filtro de status (Completo, Incompleto ou Não iniciado).",
+        "Relatórios Biopsicossociais: use o filtro geral (Completo ou Incompleto). Ao escolher Incompleto, aparece um filtro para ver qual profissional está pendente (Psicólogo, Psicopedagogo ou Assistente Social).",
+        "Sem nenhum filtro, a lista mostra todos, inclusive os não iniciados."
+      ],
+      "bom_saber": "",
+      "se_nao_resolver": "",
+      "palavras_chave": "filtro completo incompleto pendente profissional relatório biopsicossocial estudo de caso não iniciado",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "cad-01",
+      "categoria": "cadastros",
+      "pergunta": "Como cadastro vários usuários, alunos, escolas ou professores de uma vez?",
+      "introducao": "",
+      "passos": [
+        "Na tela de cadastro, baixe o modelo de planilha do próprio sistema.",
+        "Preencha sem alterar os títulos das colunas. Informe estado, município e escola em todas as linhas.",
+        "Envie a planilha pelo botão de importação.",
+        "Confira a mensagem de resultado e corrija as linhas com erro."
+      ],
+      "bom_saber": "Planilhas fora do modelo do sistema geram usuários sem estado ou município, e eles não conseguem ver os alunos.",
+      "se_nao_resolver": "",
+      "palavras_chave": "cadastro em lote planilha importar excel modelo vários usuários alunos escolas professores",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "cad-02",
+      "categoria": "cadastros",
+      "pergunta": "Cadastrei um usuário e ele não vê nenhum aluno.",
+      "introducao": "O motivo mais comum é estado, município ou escola vazios no cadastro dele. Não importa se o município foi digitado em maiúsculas ou minúsculas.",
+      "passos": [
+        "Em Cadastro de usuários, abra o usuário e confira estado, município e escola.",
+        "Corrija e salve.",
+        "Peça para o usuário sair e entrar novamente."
+      ],
+      "bom_saber": "",
+      "se_nao_resolver": "",
+      "palavras_chave": "usuário cadastrado não vê alunos município vazio perfil incompleto",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "cad-03",
+      "categoria": "cadastros",
+      "pergunta": "O e-mail \"já está cadastrado\", ou o usuário não consegue entrar.",
+      "introducao": "Cada e-mail deve ter um único cadastro. Se a mesma pessoa tem dois cadastros com o mesmo e-mail (por exemplo, professor e secretária), o acesso pode falhar.",
+      "passos": [
+        "Confira se a pessoa não foi cadastrada duas vezes.",
+        "Se houver dois, defina qual perfil deve ficar.",
+        "Peça ao suporte para remover o cadastro antigo."
+      ],
+      "bom_saber": "",
+      "se_nao_resolver": "Abra um chamado informando o e-mail e o perfil que deve permanecer.",
+      "palavras_chave": "e-mail já cadastrado duplicado dois cadastros não consegue entrar usuário duplicado",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "cad-04",
+      "categoria": "cadastros",
+      "pergunta": "Quem pode cadastrar escolas?",
+      "introducao": "",
+      "passos": [
+        "O secretário cadastra escolas.",
+        "O administrador também pode cadastrar escolas."
+      ],
+      "bom_saber": "",
+      "se_nao_resolver": "",
+      "palavras_chave": "cadastrar escola quem pode secretário administrador",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "cad-05",
+      "categoria": "cadastros",
+      "pergunta": "Aparecem duas escolas com o mesmo nome nos filtros.",
+      "introducao": "Quando a mesma escola foi cadastrada duas vezes, os relatórios ficam divididos entre as duas.",
+      "passos": [
+        "Filtre pela primeira e depois pela segunda para ver onde estão os relatórios.",
+        "Não crie uma terceira escola com o mesmo nome.",
+        "Peça ao suporte para unir os cadastros."
+      ],
+      "bom_saber": "",
+      "se_nao_resolver": "Informe o nome da escola e o município no chamado.",
+      "palavras_chave": "escola duplicada mesmo nome dois cadastros filtro relatórios faltando",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "cad-06",
+      "categoria": "cadastros",
+      "pergunta": "O cadastro manual de professor dá erro.",
+      "introducao": "",
+      "passos": [
+        "Confira os campos obrigatórios: nome, e-mail, estado, município e escola.",
+        "Veja se o e-mail está correto, sem espaços, e se ainda não foi cadastrado.",
+        "Tente salvar de novo."
+      ],
+      "bom_saber": "",
+      "se_nao_resolver": "Se continuar, abra um chamado com print da mensagem de erro e os dados preenchidos (sem senha).",
+      "palavras_chave": "cadastro manual professor erro não salva campos obrigatórios",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "pdf-01",
+      "categoria": "pdf",
+      "pergunta": "O PDF assinado não mostra a correção que fiz depois.",
+      "introducao": "O PDF assinado é \"selado\" no momento do envio para assinatura e não pode ser alterado depois. Isso garante a validade jurídica.",
+      "passos": [
+        "Para ter um PDF assinado corrigido: edite o relatório e salve. A assinatura anterior é cancelada, o sistema gera uma nova versão e todos assinam de novo.",
+        "Para consultar os dados atuais: exporte o PDF pela própria tela do sistema. Esse PDF não tem assinatura digital."
+      ],
+      "bom_saber": "",
+      "se_nao_resolver": "",
+      "palavras_chave": "pdf desatualizado sem correção assinado selado alterar exportar divergente",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "pdf-02",
+      "categoria": "pdf",
+      "pergunta": "Não consigo baixar o laudo ou o estudo de caso assinado.",
+      "introducao": "O download do documento assinado só funciona depois que todos os profissionais assinaram.",
+      "passos": [
+        "Confira o status do relatório. Se estiver Concluído, faltam assinaturas: peça aos profissionais para assinarem.",
+        "Se precisar do documento com urgência, use Exportar na tela: gera um PDF sem assinatura digital.",
+        "Relatórios criados até 17/08/2026 têm o download normal liberado."
+      ],
+      "bom_saber": "",
+      "se_nao_resolver": "Se o status é Assinado e o download não funciona, abra um chamado com o nome do relatório e as iniciais do aluno.",
+      "palavras_chave": "baixar laudo download pdf estudo de caso assinado não consigo baixar censo",
+      "confirmar_antes_de_publicar": true
+    },
+    {
+      "id": "aju-01",
+      "categoria": "ajuda",
+      "pergunta": "Como abro um chamado e o que preciso enviar?",
+      "introducao": "Chamados completos são resolvidos mais rápido. Envie tudo de uma vez, usando o modelo abaixo.",
+      "passos": [
+        "Antes de abrir, faça o Guia rápido do alto desta página.",
+        "Copie o modelo de chamado (botão abaixo) e preencha cada linha.",
+        "Anexe um print ou um vídeo curto com áudio mostrando o problema.",
+        "Envie ao suporte do seu município."
+      ],
+      "bom_saber": "",
+      "se_nao_resolver": "",
+      "palavras_chave": "abrir chamado suporte ajuda modelo enviar informação problema contato",
+      "confirmar_antes_de_publicar": false
+    },
+    {
+      "id": "aju-02",
+      "categoria": "ajuda",
+      "pergunta": "Como enviar informações ao suporte sem expor dados dos alunos e a minha senha?",
+      "introducao": "",
+      "passos": [
+        "Nunca envie senhas, por nenhum canal. O suporte não precisa delas: basta o e-mail de acesso.",
+        "Identifique o aluno pelas iniciais e pelo número de cadastro. Não envie nome completo junto com diagnóstico.",
+        "Evite enviar prints com dados de saúde em grupos de mensagens. Envie somente ao responsável pelo suporte.",
+        "Se a sua senha foi enviada por engano em algum canal, peça a redefinição imediatamente."
+      ],
+      "bom_saber": "Dados de alunos e diagnósticos são dados de saúde de menores e estão protegidos pela LGPD.",
+      "se_nao_resolver": "",
+      "palavras_chave": "segurança senha lgpd dados alunos privacidade não enviar senha nome diagnóstico",
+      "confirmar_antes_de_publicar": false
+    }
+  ]
+}
