@@ -203,7 +203,14 @@ export default function Login() {
       <div className="w-full flex items-center justify-between pr-2 pl-2">
         <BrandLogo bg="dark" width={180} priority />
 
-        <nav className="flex space-x-4">{/* Link opcional para home */}</nav>
+        <nav className="flex space-x-4">
+          <a
+            href="/#planos"
+            className="text-sm text-white/90 hover:text-brand-orange transition-colors font-medium"
+          >
+            Ver Planos e Preços
+          </a>
+        </nav>
       </div>
 
       <div className="flex items-center justify-center min-h-[calc(100vh-8rem)]">

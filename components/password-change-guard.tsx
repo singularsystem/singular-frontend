@@ -4,7 +4,14 @@ import { useAuth } from "@/contexts/auth-context";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-const ALLOWED_ROUTES_PREFIX = ["/login", "/primeiro-acesso", "/public"];
+const ALLOWED_ROUTES_PREFIX = [
+  "/login",
+  "/cadastro",
+  "/recuperar-senha",
+  "/validar",
+  "/primeiro-acesso",
+  "/public",
+];
 
 export function PasswordChangeGuard({
   children,
@@ -19,9 +26,9 @@ export function PasswordChangeGuard({
   useEffect(() => {
     if (isLoading) return;
 
-    const isAllowedRoute = ALLOWED_ROUTES_PREFIX.some((route) =>
-      pathname.startsWith(route),
-    );
+    const isAllowedRoute =
+      pathname === "/" ||
+      ALLOWED_ROUTES_PREFIX.some((route) => pathname.startsWith(route));
 
     if (!token || !user) {
       setBlocked(false);

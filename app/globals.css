@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 /* Tipografia da marca: Poppins (títulos e chamadas) e DM Sans (textos e interface) */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-dm-sans), system-ui, sans-serif;
 }
@@ -122,3 +126,47 @@ h4 {
 .prose-content .space-y-2 > * + * {
   margin-top: 0.5rem;
 }
+
+/* Animações e efeitos de hover avançados da Landing Page */
+@keyframes floatSlow {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 4.5s ease-in-out infinite;
+}
+
+/* Efeito de brilho (shimmer) que atravessa botões e cards no hover */
+.hover-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.hover-shine::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 65%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+  transform: skewX(-20deg);
+  transition: left 0.65s ease;
+  pointer-events: none;
+}
+
+.hover-shine:hover::after {
+  left: 140%;
+}
+

@@ -57,7 +57,13 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       localStorage.removeItem("tokenExpiration");
       setToken(null);
       setUser(null);
-      if (isMounted && !pathname.includes("/login")) {
+      const isPublicRoute =
+        pathname === "/" ||
+        pathname.startsWith("/login") ||
+        pathname.startsWith("/cadastro") ||
+        pathname.startsWith("/recuperar-senha") ||
+        pathname.startsWith("/validar");
+      if (isMounted && !isPublicRoute) {
         router.push("/login");
       }
     }

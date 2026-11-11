@@ -6,7 +6,15 @@ import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
 const TERM_KEY = "AEE_TERMO_RESPONSABILIDADE";
-const ALLOW_ROUTES_PREFIX = ["/login", "/termo", "/primeiro-acesso", "/public"];
+const ALLOW_ROUTES_PREFIX = [
+  "/login",
+  "/cadastro",
+  "/recuperar-senha",
+  "/validar",
+  "/termo",
+  "/primeiro-acesso",
+  "/public",
+];
 
 export function TermsGuard({ children }: { children: React.ReactNode }) {
   const router = useRouter();
@@ -22,8 +30,11 @@ export function TermsGuard({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (authLoading) return;
 
-    // rotas liberadas
-    if (ALLOW_ROUTES_PREFIX.some((p) => pathname?.startsWith(p))) {
+    // rotas liberadas (incluindo a Landing Page na raiz "/")
+    if (
+      pathname === "/" ||
+      ALLOW_ROUTES_PREFIX.some((p) => pathname?.startsWith(p))
+    ) {
       setBlocked(false);
       lastCheckKey.current = "";
       return;
