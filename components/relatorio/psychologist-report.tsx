@@ -34,7 +34,7 @@ export function TabPsicologico({ relatorio }: Props) {
             independência e adaptação ao ambiente.
           </li>
           <li>
-            <strong>QUESTIONÁRIO IPAAGS (Ficha de Triagem 1.1)</strong>:
+            <strong>QUESTIONÁRIO DE TRIAGEM MULTIPROFISSIONAL (Ficha de Triagem 1.1)</strong>:
             Instrumento de triagem abrangente que avalia múltiplas áreas do
             desenvolvimento, incluindo linguagem, escrita, leitura, raciocínio
             lógico, autonomia, memória, atenção e interação socioemocional.

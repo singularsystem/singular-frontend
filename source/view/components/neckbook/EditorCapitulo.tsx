@@ -46,7 +46,7 @@ export function EditorCapitulo({
       {/* Cabeçalho do capítulo com controles de ordem */}
       <div className="flex items-center justify-between border-b pb-3">
         <div className="flex items-center gap-2">
-          <span className="font-bold text-sm text-[#111C4E] bg-blue-50 border border-blue-200 px-2.5 py-1 rounded-md">
+          <span className="font-bold text-sm text-brand-navy bg-blue-50 border border-blue-200 px-2.5 py-1 rounded-md">
             Capítulo {chapter.order}
           </span>
           <span className="text-xs text-gray-500">
@@ -196,7 +196,7 @@ export function EditorCapitulo({
               size="sm"
               onClick={handleAddExercise}
               disabled={novoExercicio.trim() === ""}
-              className="h-8 bg-[#111C4E] hover:bg-[#111C4E]/90 text-white text-xs px-2.5"
+              className="h-8 bg-brand-navy hover:bg-brand-navy/90 text-white text-xs px-2.5"
             >
               <Plus className="h-3.5 w-3.5 mr-1" />
               Adicionar

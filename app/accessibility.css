@@ -20,27 +20,27 @@
   font-size: calc(1rem * var(--font-size-multiplier));
 }
 
-/* Esquemas de cores de alto contraste */
+/* Esquemas de cores de alto contraste alinhados à Singular System */
 .color-scheme-high-contrast {
   --background: 0 0% 100%;
-  --foreground: 0 0% 0%;
-  --primary: 240 100% 50%;
+  --foreground: 224 59% 16%;
+  --primary: 224 59% 16%;
   --primary-foreground: 0 0% 100%;
-  --muted: 0 0% 90%;
-  --muted-foreground: 0 0% 0%;
-  --border: 0 0% 0%;
-  --focus: 240 100% 50%;
+  --muted: 220 43% 97%;
+  --muted-foreground: 224 59% 16%;
+  --border: 224 59% 16%;
+  --focus: 23 100% 57%;
 }
 
 .color-scheme-dark-high-contrast {
-  --background: 0 0% 0%;
+  --background: 224 59% 9%;
   --foreground: 0 0% 100%;
-  --primary: 240 100% 70%;
-  --primary-foreground: 0 0% 0%;
-  --muted: 0 0% 20%;
+  --primary: 23 100% 57%;
+  --primary-foreground: 224 59% 16%;
+  --muted: 224 45% 20%;
   --muted-foreground: 0 0% 100%;
   --border: 0 0% 100%;
-  --focus: 240 100% 70%;
+  --focus: 23 100% 57%;
 }
 
 /* Animações reduzidas */

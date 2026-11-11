@@ -156,14 +156,16 @@ export function AlunoDetailsScreen({ id }: AlunoDetailsScreenProps) {
                   {aluno.sex}
                 </p>
               </div>
-              <div className="space-y-2">
-                <span className="block text-[11px] font-bold text-slate-400 uppercase tracking-widest">
-                  Escola
-                </span>
-                <p className="text-slate-800 font-semibold text-sm md:text-base leading-relaxed">
-                  {aluno.schoolName}
-                </p>
-              </div>
+              {aluno.schoolName && (
+                <div className="space-y-2">
+                  <span className="block text-[11px] font-bold text-slate-400 uppercase tracking-widest">
+                    Escola
+                  </span>
+                  <p className="text-slate-800 font-semibold text-sm md:text-base leading-relaxed">
+                    {aluno.schoolName}
+                  </p>
+                </div>
+              )}
               <div className="space-y-2">
                 <span className="block text-[11px] font-bold text-slate-400 uppercase tracking-widest">
                   Endereço

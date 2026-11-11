@@ -432,7 +432,7 @@ export default function PlanoPEI({
                   <Button
                     onClick={handleSaveReportFields}
                     disabled={savingReportFields}
-                    className=" bg-[#111C4E] hover:bg-blue-800"
+                    className=" bg-brand-navy hover:bg-blue-800"
                   >
                     {savingReportFields ? "Salvando..." : "Salvar Relatório"}
                   </Button>

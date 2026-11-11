@@ -74,7 +74,7 @@ export function GeracaoLivroScreen() {
     <div className="p-6 md:p-8 max-w-4xl mx-auto space-y-6">
       <div>
         <h1 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
-          <BookOpen className="h-7 w-7 text-[#111C4E]" />
+          <BookOpen className="h-7 w-7 text-brand-navy" />
           Geração de Livro Didático Adaptado
         </h1>
         <p className="text-sm text-gray-600 mt-1">
@@ -130,7 +130,7 @@ export function GeracaoLivroScreen() {
           <Button
             type="button"
             onClick={() => router.push(`/livros/${state.bookId}/rascunho`)}
-            className="bg-[#111C4E] hover:bg-[#111C4E]/90 text-white font-medium text-xs shrink-0"
+            className="bg-brand-navy hover:bg-brand-navy/90 text-white font-medium text-xs shrink-0"
           >
             Revisar Rascunho
           </Button>
@@ -209,7 +209,7 @@ export function GeracaoLivroScreen() {
               type="button"
               disabled={isBusy}
               onClick={actions.gerar}
-              className="bg-[#111C4E] hover:bg-[#111C4E]/90 text-white font-medium px-8 py-2.5 h-auto text-sm shadow-sm"
+              className="bg-brand-navy hover:bg-brand-navy/90 text-white font-medium px-8 py-2.5 h-auto text-sm shadow-sm"
             >
               {state.isGenerating ? (
                 <>

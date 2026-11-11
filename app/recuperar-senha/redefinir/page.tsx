@@ -16,6 +16,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
 import { useToast } from "@/hooks/use-toast";
+import { BrandLogo } from "@/components/brand/brand-logo";
 import {
   AlertCircle,
   ArrowLeft,
@@ -119,7 +120,7 @@ export default function RedefinirSenha() {
       <Card className="w-full max-w-md">
         <CardHeader className="space-y-1">
           <div className="flex justify-center mb-4">
-            <img src="/logo.png" alt="Logo IPAAGS" className="h-12 w-auto" />
+            <BrandLogo bg="light" width={180} priority />
           </div>
           <CardTitle className="text-2xl text-center">
             {step === 1 ? "Redefinir Senha" : "Senha Redefinida"}
@@ -290,8 +291,7 @@ export default function RedefinirSenha() {
             </div>
           )}
           <div className="text-center text-xs text-gray-500">
-            © {new Date().getFullYear()} Instituto Piauiense de Assistência,
-            Auditoria e Gestão em Saúde
+            © {new Date().getFullYear()} Singular System
           </div>
         </CardFooter>
       </Card>

@@ -235,7 +235,7 @@ export function MunicipioFormDialog({
         <div className="mb-5">
           <h2
             id="municipio-form-dialog-title"
-            className="text-lg font-bold text-[#111C4E]"
+            className="text-lg font-bold text-brand-navy"
           >
             {mode === "create"
               ? "Novo Município"
@@ -405,7 +405,7 @@ export function MunicipioFormDialog({
               checked={moduleActive}
               disabled={isSubmitting}
               onChange={(e) => setModuleActive(e.target.checked)}
-              className="h-4 w-4 rounded border-slate-300 text-[#111C4E] focus:ring-[#111C4E]"
+              className="h-4 w-4 rounded border-slate-300 text-brand-navy focus:ring-brand-navy"
             />
           </div>
 
@@ -442,7 +442,7 @@ export function MunicipioFormDialog({
               type="submit"
               disabled={isSubmitting}
               data-testid="municipio-form-submit"
-              className="rounded-xl bg-[#111C4E] hover:bg-blue-800 text-white"
+              className="rounded-xl bg-brand-navy hover:bg-blue-800 text-white"
             >
               {isSubmitting
                 ? "Salvando..."

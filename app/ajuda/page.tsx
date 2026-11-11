@@ -145,11 +145,11 @@ export default function AjudaPage() {
   return (
     <div className="max-w-5xl mx-auto space-y-8 pb-16 pt-2">
       {/* Header com identidade visual do sistema */}
-      <div className="bg-gradient-to-r from-[#111C4E] via-[#0d2a63] to-[#0071CE] text-white rounded-2xl p-6 sm:p-10 shadow-lg relative overflow-hidden">
-        <div className="absolute right-0 top-0 translate-x-12 -translate-y-12 w-64 h-64 bg-cyan-400/10 rounded-full blur-2xl pointer-events-none" />
+      <div className="bg-gradient-to-r from-brand-navy via-brand-navy-light to-brand-navy-light text-white rounded-2xl p-6 sm:p-10 shadow-lg relative overflow-hidden">
+        <div className="absolute right-0 top-0 translate-x-12 -translate-y-12 w-64 h-64 bg-brand-orange/10 rounded-full blur-2xl pointer-events-none" />
         <div className="relative z-10 max-w-3xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md text-cyan-200 text-xs font-semibold uppercase tracking-wider mb-3">
-            <HelpCircle className="w-4 h-4 text-[#19D3C5]" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md text-brand-orange text-xs font-semibold uppercase tracking-wider mb-3">
+            <HelpCircle className="w-4 h-4 text-brand-orange" />
             {FAQ_DATA.titulo}
           </div>
           <h1 className="text-2xl sm:text-4xl font-bold tracking-tight">
@@ -168,7 +168,7 @@ export default function AjudaPage() {
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 placeholder="Ex.: assinar relatório, senha bloqueada, aluno não aparece..."
-                className="w-full pl-12 pr-12 py-3.5 bg-white text-gray-900 rounded-xl shadow-md placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-cyan-300 text-sm sm:text-base transition-all"
+                className="w-full pl-12 pr-12 py-3.5 bg-white text-gray-900 rounded-xl shadow-md placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-brand-orange text-sm sm:text-base transition-all"
               />
               {searchTerm && (
                 <button
@@ -185,7 +185,7 @@ export default function AjudaPage() {
 
           {/* Chips de Assuntos Frequentes */}
           <div className="mt-4 flex flex-wrap items-center gap-2">
-            <span className="text-xs text-cyan-100 font-medium">Assuntos frequentes:</span>
+            <span className="text-xs text-brand-ice font-medium">Assuntos frequentes:</span>
             {QUICK_CHIPS.map((chip) => (
               <button
                 key={chip}
@@ -204,10 +204,10 @@ export default function AjudaPage() {
       {!searchTerm && (
         <section className="bg-white border border-gray-200/80 rounded-2xl p-6 sm:p-8 shadow-sm">
           <div className="flex items-center gap-3 mb-2">
-            <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-cyan-100 text-[#0b6b6f] font-bold text-sm">
+            <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-brand-ice text-brand-navy font-bold text-sm">
               !
             </span>
-            <h2 className="text-lg sm:text-xl font-bold text-[#111C4E]">
+            <h2 className="text-lg sm:text-xl font-bold text-brand-navy">
               Guia rápido: 5 passos antes de pedir ajuda
             </h2>
           </div>
@@ -221,14 +221,14 @@ export default function AjudaPage() {
               return (
                 <div
                   key={index}
-                  className="bg-gray-50 border border-gray-100 rounded-xl p-4 flex flex-col justify-between hover:border-cyan-200 transition-all group"
+                  className="bg-gray-50 border border-gray-100 rounded-xl p-4 flex flex-col justify-between hover:border-brand-orange transition-all group"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-3">
-                      <span className="w-7 h-7 rounded-full bg-[#111C4E] group-hover:bg-[#0071CE] text-white text-xs font-bold flex items-center justify-center transition-colors">
+                      <span className="w-7 h-7 rounded-full bg-brand-navy group-hover:bg-brand-navy-light text-white text-xs font-bold flex items-center justify-center transition-colors">
                         {index + 1}
                       </span>
-                      <IconComp className="w-4 h-4 text-gray-400 group-hover:text-[#0071CE] transition-colors" />
+                      <IconComp className="w-4 h-4 text-gray-400 group-hover:text-brand-link transition-colors" />
                     </div>
                     <h3 className="font-semibold text-sm text-gray-900 mb-1">
                       {item.passo}
@@ -257,7 +257,7 @@ export default function AjudaPage() {
           <button
             type="button"
             onClick={handleClearSearch}
-            className="text-[#0071CE] text-xs font-semibold hover:underline"
+            className="text-brand-link text-xs font-semibold hover:underline"
           >
             Limpar filtro de busca
           </button>
@@ -271,7 +271,7 @@ export default function AjudaPage() {
           onClick={() => setSelectedCategory("todas")}
           className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-medium whitespace-nowrap transition-all ${
             selectedCategory === "todas"
-              ? "bg-[#111C4E] text-white shadow-sm"
+              ? "bg-brand-navy text-white shadow-sm"
               : "bg-white text-gray-600 hover:bg-gray-100 border border-gray-200"
           }`}
         >
@@ -287,7 +287,7 @@ export default function AjudaPage() {
               onClick={() => setSelectedCategory(cat.id)}
               className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-medium whitespace-nowrap transition-all flex items-center gap-2 ${
                 isSelected
-                  ? "bg-[#111C4E] text-white shadow-sm"
+                  ? "bg-brand-navy text-white shadow-sm"
                   : "bg-white text-gray-600 hover:bg-gray-100 border border-gray-200"
               }`}
             >
@@ -320,10 +320,10 @@ export default function AjudaPage() {
             return (
               <section key={cat.id} className="space-y-3">
                 <div className="flex items-center gap-2 px-1">
-                  <h2 className="text-lg font-bold text-[#111C4E]">
+                  <h2 className="text-lg font-bold text-brand-navy">
                     {cat.titulo}
                   </h2>
-                  <span className="text-xs font-semibold text-cyan-800 bg-cyan-100/70 px-2 py-0.5 rounded-full">
+                  <span className="text-xs font-semibold text-brand-navy bg-brand-ice px-2 py-0.5 rounded-full border border-gray-200">
                     {catQuestions.length}
                   </span>
                 </div>
@@ -338,14 +338,14 @@ export default function AjudaPage() {
                         id={item.id}
                         className={`bg-white rounded-xl border transition-all duration-200 overflow-hidden ${
                           isOpen
-                            ? "border-[#0071CE] shadow-sm"
+                            ? "border-brand-navy-light shadow-sm"
                             : "border-gray-200 hover:border-gray-300"
                         }`}
                       >
                         <button
                           type="button"
                           onClick={() => toggleItem(item.id)}
-                          className="w-full text-left p-4 sm:p-5 flex items-center justify-between gap-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0071CE]"
+                          className="w-full text-left p-4 sm:p-5 flex items-center justify-between gap-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange"
                           aria-expanded={isOpen}
                         >
                           <span className="font-semibold text-gray-900 text-sm sm:text-base leading-snug">
@@ -353,7 +353,7 @@ export default function AjudaPage() {
                           </span>
                           <ChevronDown
                             className={`w-5 h-5 text-gray-400 shrink-0 transition-transform duration-200 ${
-                              isOpen ? "rotate-180 text-[#0071CE]" : ""
+                              isOpen ? "rotate-180 text-brand-link" : ""
                             }`}
                           />
                         </button>
@@ -377,8 +377,8 @@ export default function AjudaPage() {
                             )}
 
                             {item.bom_saber && (
-                              <div className="bg-[#e2f0f0]/60 border border-[#5cc4c6]/40 rounded-xl p-3.5 text-[#0b6b6f] flex items-start gap-3">
-                                <Info className="w-5 h-5 shrink-0 text-[#0b6b6f] mt-0.5" />
+                              <div className="bg-brand-ice/60 border border-brand-navy-light/40 rounded-xl p-3.5 text-brand-link flex items-start gap-3">
+                                <Info className="w-5 h-5 shrink-0 text-brand-link mt-0.5" />
                                 <div className="text-xs sm:text-sm leading-relaxed">
                                   <strong>Bom saber: </strong>
                                   {item.bom_saber}
@@ -406,7 +406,7 @@ export default function AjudaPage() {
                                   <button
                                     type="button"
                                     onClick={handleCopyTicketTemplate}
-                                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#0071CE] hover:bg-[#005fb0] text-white text-xs font-semibold shadow-sm transition-colors"
+                                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-brand-navy-light hover:bg-brand-navy text-white text-xs font-semibold shadow-sm transition-colors"
                                   >
                                     {copied ? (
                                       <>
@@ -440,7 +440,7 @@ export default function AjudaPage() {
       {/* Estado vazio quando nada é encontrado */}
       {filteredQuestions.length === 0 && (
         <div className="bg-white rounded-2xl border border-dashed border-gray-300 p-8 sm:p-12 text-center space-y-4">
-          <div className="w-12 h-12 rounded-full bg-cyan-50 text-[#0071CE] flex items-center justify-center mx-auto">
+          <div className="w-12 h-12 rounded-full bg-brand-ice text-brand-navy flex items-center justify-center mx-auto border border-gray-200">
             <FileQuestion className="w-6 h-6" />
           </div>
           <div className="max-w-md mx-auto">
@@ -455,7 +455,7 @@ export default function AjudaPage() {
             <button
               type="button"
               onClick={handleCopyTicketTemplate}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#0071CE] hover:bg-[#005fb0] text-white text-xs sm:text-sm font-semibold transition-colors"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-brand-navy-light hover:bg-brand-navy text-white text-xs sm:text-sm font-semibold transition-colors"
             >
               {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
               {copied ? "Modelo de chamado copiado!" : "Copiar modelo de chamado para suporte"}
@@ -467,7 +467,7 @@ export default function AjudaPage() {
       {/* Card Fixo de Suporte ao Final */}
       <div className="bg-white rounded-2xl border border-gray-200 p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 shadow-sm">
         <div className="space-y-1">
-          <h3 className="text-base sm:text-lg font-bold text-[#111C4E]">
+          <h3 className="text-base sm:text-lg font-bold text-brand-navy">
             Ainda precisa de ajuda?
           </h3>
           <p className="text-xs sm:text-sm text-gray-500 max-w-xl">
@@ -477,7 +477,7 @@ export default function AjudaPage() {
         <button
           type="button"
           onClick={handleCopyTicketTemplate}
-          className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-[#0071CE] to-[#19D3C5] hover:opacity-95 text-white font-medium text-xs sm:text-sm shadow-md shrink-0 transition-opacity"
+          className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-brand-navy-light to-brand-orange hover:opacity-95 text-white font-medium text-xs sm:text-sm shadow-md shrink-0 transition-opacity"
         >
           {copied ? <Check className="w-4 h-4" /> : <Send className="w-4 h-4" />}
           {copied ? "Modelo copiado!" : "Copiar modelo de chamado"}

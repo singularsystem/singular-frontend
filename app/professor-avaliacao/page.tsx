@@ -188,7 +188,7 @@ const [mySummary, setMySummary] = useState({
   return (
     <main className="flex-1 p-6 bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] overflow-hidden">
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-3xl font-bold tracking-tight text-[#111C4E]">
+        <h1 className="text-3xl font-bold tracking-tight text-brand-navy">
           Estudos de Caso
         </h1>
         <div className="flex gap-2">
@@ -217,7 +217,7 @@ const [mySummary, setMySummary] = useState({
               }}
               className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
                 !filters.onlyMyDocs
-                  ? "bg-[#111C4E] text-white shadow-sm"
+                  ? "bg-brand-navy text-white shadow-sm"
                   : "bg-slate-100 text-slate-600 hover:bg-slate-200"
               }`}
             >
@@ -237,7 +237,7 @@ const [mySummary, setMySummary] = useState({
               }}
               className={`px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2 transition-all ${
                 filters.onlyMyDocs
-                  ? "bg-[#111C4E] text-white shadow-sm"
+                  ? "bg-brand-navy text-white shadow-sm"
                   : "bg-slate-100 text-slate-600 hover:bg-slate-200"
               }`}
             >
@@ -246,8 +246,8 @@ const [mySummary, setMySummary] = useState({
                 <span
                   className={`text-xs px-2 py-0.5 rounded-full font-bold ${
                     filters.onlyMyDocs
-                      ? "bg-white text-[#111C4E]"
-                      : "bg-[#111C4E] text-white"
+                      ? "bg-white text-brand-navy"
+                      : "bg-brand-navy text-white"
                   }`}
                 >
                   {mySummary.total}
@@ -373,7 +373,7 @@ const [mySummary, setMySummary] = useState({
         </div>
         <div className="text-sm text-gray-600 whitespace-nowrap">
           Estudos encontrados: {" "}
-          <span className="font-semibold text-[#111C4E]">
+          <span className="font-semibold text-brand-navy">
             {uniqueTotal ?? 0}
           </span>
         </div>

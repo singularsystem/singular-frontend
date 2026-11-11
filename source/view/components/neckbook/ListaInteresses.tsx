@@ -87,7 +87,7 @@ export function ListaInteresses({
             novoInteresse.trim() === "" ||
             interesses.length >= MAX_INTERESSES
           }
-          className="bg-[#111C4E] hover:bg-[#111C4E]/90 text-white shrink-0"
+          className="bg-brand-navy hover:bg-brand-navy/90 text-white shrink-0"
         >
           <Plus className="h-4 w-4 mr-1" />
           Adicionar

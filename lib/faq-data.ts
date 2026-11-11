@@ -1,7 +1,7 @@
 import { FaqData } from "@/types/faq";
 
 export const FAQ_DATA: FaqData = {
-  titulo: "Central de ajuda do IPAAGS AEE",
+  titulo: "Central de Ajuda da Singular System",
   versao: "1.0",
   atualizado_em: "2026-09-21",
   guia_rapido: [
@@ -103,16 +103,16 @@ export const FAQ_DATA: FaqData = {
       id: "ass-03",
       categoria: "assinatura",
       pergunta: "Recebi vários e-mails para assinar o mesmo documento. Qual devo usar?",
-      introducao: "Assine sempre pelo botão **Assinar** dentro do sistema IPAAGS. Links de e-mails antigos foram descartados e não valem.",
+      introducao: "Assine sempre pelo botão **Assinar** dentro da plataforma Singular System. Links de e-mails antigos foram descartados e não valem.",
       passos: [
-        "Entre no sistema IPAAGS com o seu login.",
+        "Entre na plataforma Singular System com o seu login.",
         "Abra o relatório do aluno.",
         "Clique em Assinar e conclua a assinatura.",
         "Ignore os e-mails anteriores. Não é preciso apagar nem responder."
       ],
       bom_saber: "Se o relatório aparece como Em andamento, não assine por e-mail: complete o que falta primeiro.",
       se_nao_resolver: "",
-      palavras_chave: "vários e-mails link antigo assinar de novo zapsign duplicado",
+      palavras_chave: "vários e-mails link antigo assinar de novo duplicado",
       confirmar_antes_de_publicar: false
     },
     {

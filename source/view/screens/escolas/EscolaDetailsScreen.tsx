@@ -63,7 +63,7 @@ export function EscolaDetailsScreen({ id }: EscolaDetailsScreenProps) {
     return (
       <main className="flex-1 p-6 md:p-8 bg-slate-50/50 flex flex-col items-center justify-center min-h-[50vh] space-y-4">
         <School className="h-16 w-16 text-slate-300" />
-        <h2 className="text-xl font-bold text-[#111C4E]">Escola não encontrada</h2>
+        <h2 className="text-xl font-bold text-brand-navy">Escola não encontrada</h2>
         <p className="text-slate-500 text-sm">A escola solicitada não existe ou foi removida.</p>
         <Button variant="outline" onClick={back} className="flex items-center gap-2 rounded-xl">
           <ArrowLeft className="h-4 w-4" /> Voltar
@@ -88,7 +88,7 @@ export function EscolaDetailsScreen({ id }: EscolaDetailsScreenProps) {
           </Button>
           <div>
             <span className="text-xs font-semibold uppercase tracking-wider text-slate-400">Escolas</span>
-            <h1 className="text-3xl font-bold tracking-tight text-[#111C4E]">{school.name}</h1>
+            <h1 className="text-3xl font-bold tracking-tight text-brand-navy">{school.name}</h1>
           </div>
         </div>
 
@@ -109,18 +109,18 @@ export function EscolaDetailsScreen({ id }: EscolaDetailsScreenProps) {
       <div className="grid gap-6 md:grid-cols-3">
         <Card className="md:col-span-2 shadow-sm border border-slate-100 rounded-2xl bg-white overflow-hidden">
           <CardHeader className="p-8 border-b border-slate-50 flex flex-row items-center gap-3 bg-gradient-to-r from-slate-50 to-white">
-            <div className="h-10 w-10 rounded-xl bg-blue-50 flex items-center justify-center text-[#111C4E]">
+            <div className="h-10 w-10 rounded-xl bg-blue-50 flex items-center justify-center text-brand-navy">
               <School className="h-5 w-5" />
             </div>
             <div>
-              <CardTitle className="text-lg font-bold text-[#111C4E]">Informações da Escola</CardTitle>
+              <CardTitle className="text-lg font-bold text-brand-navy">Informações da Escola</CardTitle>
               <p className="text-xs text-slate-500">Dados gerais e cadastro institucional</p>
             </div>
           </CardHeader>
           <CardContent className="p-8 grid gap-8 md:grid-cols-2">
             <div className="space-y-1">
               <span className="text-xs font-medium text-slate-400 uppercase tracking-wider block">Nome Institucional</span>
-              <span className="text-base font-semibold text-[#111C4E] block">{school.name}</span>
+              <span className="text-base font-semibold text-brand-navy block">{school.name}</span>
             </div>
             <div className="space-y-1">
               <span className="text-xs font-medium text-slate-400 uppercase tracking-wider block">Localização</span>
@@ -165,7 +165,7 @@ export function EscolaDetailsScreen({ id }: EscolaDetailsScreenProps) {
               <Users className="h-5 w-5" />
             </div>
             <div>
-              <CardTitle className="text-lg font-bold text-[#111C4E]">Estatísticas de Alunos</CardTitle>
+              <CardTitle className="text-lg font-bold text-brand-navy">Estatísticas de Alunos</CardTitle>
               <p className="text-xs text-slate-500">Métricas populacionais da escola</p>
             </div>
           </CardHeader>
@@ -200,7 +200,7 @@ export function EscolaDetailsScreen({ id }: EscolaDetailsScreenProps) {
               <Award className="h-5 w-5" />
             </div>
             <div>
-              <CardTitle className="text-lg font-bold text-[#111C4E]">Distribuição por Tipo de Deficiência</CardTitle>
+              <CardTitle className="text-lg font-bold text-brand-navy">Distribuição por Tipo de Deficiência</CardTitle>
               <p className="text-xs text-slate-500">Divisão detalhada do Atendimento Educacional Especializado (AEE)</p>
             </div>
           </CardHeader>
@@ -212,7 +212,7 @@ export function EscolaDetailsScreen({ id }: EscolaDetailsScreenProps) {
                     <span className="text-sm font-semibold text-slate-800 block">{deficiencia.tipo}</span>
                     <span className="text-xs text-slate-500 block">Necessidade Especial</span>
                   </div>
-                  <div className="h-10 w-10 rounded-full bg-slate-50 flex items-center justify-center font-bold text-[#111C4E] border border-slate-100">
+                  <div className="h-10 w-10 rounded-full bg-slate-50 flex items-center justify-center font-bold text-brand-navy border border-slate-100">
                     {deficiencia.quantidade}
                   </div>
                 </div>

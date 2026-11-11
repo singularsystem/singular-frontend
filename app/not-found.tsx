@@ -2,10 +2,14 @@ import Link from "next/link";
 import { Compass, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { BrandLogo } from "@/components/brand/brand-logo";
 
 export default function NotFound() {
   return (
     <main className="flex-1 flex flex-col items-center justify-center p-6 min-h-[70vh]">
+      <div className="mb-6">
+        <BrandLogo bg="light" width={180} />
+      </div>
       <Card className="w-full max-w-md shadow-lg border-slate-100">
         <CardHeader className="text-center pb-2">
           <div className="mx-auto w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center mb-4">
@@ -23,7 +27,7 @@ export default function NotFound() {
         </CardContent>
         <CardFooter className="flex justify-center pt-2">
           <Link href="/dashboard" passHref legacyBehavior>
-            <Button className="w-full sm:w-auto bg-[#111C4E] hover:bg-blue-800 text-white gap-2">
+            <Button className="w-full sm:w-auto bg-brand-navy hover:bg-blue-800 text-white gap-2">
               <Home className="h-4 w-4" />
               Ir para o Início
             </Button>

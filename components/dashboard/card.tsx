@@ -31,7 +31,7 @@ export function StatsCard({
       <div className="flex items-start justify-between">
         <div className="flex-1 pr-4">
           <p className="text-gray-600 text-sm font-medium mb-1">{title}</p>
-          <p className="text-3xl font-bold text-[#111C4E] mb-2">{value}</p>
+          <p className="text-3xl font-bold text-brand-navy mb-2">{value}</p>
           {hasFooter && (
             <div className="mt-3">
               {typeof changeText !== "string" ? (
@@ -56,7 +56,7 @@ export function StatsCard({
             </div>
           )}
         </div>
-        <div className="w-12 h-12 shrink-0 bg-gradient-to-r from-[#0071CE] to-[#19D3C5] rounded-xl flex items-center justify-center shadow-lg mt-1">
+        <div className="w-12 h-12 shrink-0 bg-brand-navy text-white rounded-xl flex items-center justify-center shadow-lg mt-1">
           <Icon className="w-6 h-6 text-white" />
         </div>
       </div>

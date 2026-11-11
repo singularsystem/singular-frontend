@@ -25,6 +25,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { useToast } from "@/hooks/use-toast";
+import { BrandLogo } from "@/components/brand/brand-logo";
 import { useFetchCitiesByUf } from "@/hooks/useFetchCitiesByUf";
 import { useFetchSchoolsByCity } from "@/hooks/useFetchSchools";
 import { estados, roleLabels } from "@/lib/constants";
@@ -306,24 +307,16 @@ export default function Cadastro() {
   }, [apiUrl, emailTouched, formData.email]);
 
   return (
-    <div
-      className="min-h-screen p-4"
-      style={{
-        backgroundImage: "linear-gradient(45deg, #111C4E 11%, #0071CE)",
-      }}
-    >
+    <div className="min-h-screen p-4 bg-brand-navy">
       <div className="w-full flex items-center justify-between pr-2 pl-2">
-        <div className="flex items-center gap-2">
-          <img src="/logo.png" alt="Logo IPAAGS" className="h-14 w-auto" />
-          <h1 className="text-2xl font-bold text-white">IPAAGS</h1>
-        </div>
+        <BrandLogo bg="dark" width={180} priority />
       </div>
 
       <div className="flex items-center justify-center min-h-[calc(100vh-8rem)]">
         <Card className="w-full max-w-2xl shadow-[0_25px_50px_-12px_rgba(0,0,0,1.25)]">
           <CardHeader className="space-y-1 mb-4">
-            <CardTitle className="text-2xl text-center text-[#004f90]">
-              Cadastro no Sistema AEE
+            <CardTitle className="text-2xl text-center text-brand-navy">
+              Cadastro no Singular System
             </CardTitle>
             <CardDescription className="text-center text-gray-600">
               Preencha os dados abaixo para solicitar acesso à plataforma
@@ -607,7 +600,7 @@ export default function Cadastro() {
 
               <Button
                 type="submit"
-                className="w-full bg-gradient-to-r from-[#0071CE] to-[#19D3C5] text-white"
+                className="w-full bg-brand-orange hover:bg-brand-orange-dark text-brand-navy font-semibold shadow-md"
                 disabled={isLoading || isCheckingEmail || isEmailAvailable === false}
               >
                 {isLoading ? "Enviando..." : "Cadastrar"}

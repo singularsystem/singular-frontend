@@ -48,7 +48,7 @@ export function RendaFamiliarValidacaoModal({ open, onConfirm }: Props) {
         onEscapeKeyDown={(e) => e.preventDefault()}
       >
         <DialogHeader>
-          <DialogTitle className="text-[#111C4E]">
+          <DialogTitle className="text-brand-navy">
             Classificação do Contexto Socioeconômico
           </DialogTitle>
           <DialogDescription>
@@ -60,7 +60,7 @@ export function RendaFamiliarValidacaoModal({ open, onConfirm }: Props) {
         </DialogHeader>
 
         <div className="py-2">
-          <p className="text-sm font-medium text-[#111C4E] mb-3">
+          <p className="text-sm font-medium text-brand-navy mb-3">
             Em qual ambiente socioeconômico esta criança está inserida?
           </p>
           <RadioGroup
@@ -73,7 +73,7 @@ export function RendaFamiliarValidacaoModal({ open, onConfirm }: Props) {
                 key={opt.value}
                 className={`flex items-start space-x-3 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                   selected === opt.value
-                    ? "border-[#111C4E] bg-blue-50"
+                    ? "border-brand-navy bg-blue-50"
                     : "border-gray-200 hover:border-gray-300"
                 }`}
                 onClick={() => setSelected(opt.value)}
@@ -86,7 +86,7 @@ export function RendaFamiliarValidacaoModal({ open, onConfirm }: Props) {
                 <div>
                   <Label
                     htmlFor={opt.value}
-                    className="font-medium cursor-pointer text-[#111C4E]"
+                    className="font-medium cursor-pointer text-brand-navy"
                   >
                     {opt.value}
                   </Label>
@@ -103,7 +103,7 @@ export function RendaFamiliarValidacaoModal({ open, onConfirm }: Props) {
           <Button
             onClick={handleConfirm}
             disabled={!selected}
-            className="bg-[#111C4E] hover:bg-blue-800 w-full"
+            className="bg-brand-navy hover:bg-blue-800 w-full"
           >
             Confirmar Classificação
           </Button>

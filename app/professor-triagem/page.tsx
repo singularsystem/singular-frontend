@@ -224,7 +224,7 @@ export default function TeachersScreenings() {
   return (
     <main className="flex-1 p-6 bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] overflow-hidden">
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-3xl font-bold tracking-tight text-[#111C4E]">
+        <h1 className="text-3xl font-bold tracking-tight text-brand-navy">
           Triagens do Professor Regular
         </h1>
         <div className="flex gap-2">
@@ -237,7 +237,7 @@ export default function TeachersScreenings() {
           {isTeacher && (
             <Button
               onClick={() => setOpenSelecaoStudents(true)}
-              className="bg-[#111C4E] hover:bg-blue-800"
+              className="bg-brand-navy hover:bg-blue-800"
               disabled={fetchLoading}
             >
               <Plus className="mr-2 h-4 w-4" />
@@ -268,7 +268,7 @@ export default function TeachersScreenings() {
         </div>
         <div className="text-sm text-gray-600 whitespace-nowrap">
           Triagens encontradas:{" "}
-          <span className="font-semibold text-[#111C4E]">
+          <span className="font-semibold text-brand-navy">
             {uniqueTotal ?? 0}
           </span>
         </div>

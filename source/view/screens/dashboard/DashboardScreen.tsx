@@ -412,7 +412,7 @@ export function DashboardScreen() {
         container.innerHTML = `
           <div style="display:flex; justify-content:space-between; gap:16px; align-items:flex-start;">
             <div>
-              <div style="font-size:18px; font-weight:700; color:#111C4E;">${escapeHtml(
+              <div style="font-size:18px; font-weight:700; color:hsl(var(--brand-navy));">${escapeHtml(
                 title
               )}</div>
               <div style="margin-top:4px; font-size:12px; color:#64748b;">Gerado em ${escapeHtml(
@@ -610,7 +610,7 @@ export function DashboardScreen() {
       let pageIndex = 0;
       await addPageFromHtml(
         "Relatório do Dashboard",
-        `<div style="font-size:14px; font-weight:700; color:#111C4E; margin-bottom:10px;">Resumo</div>${renderKeyValueGrid(
+        `<div style="font-size:14px; font-weight:700; color:hsl(var(--brand-navy)); margin-bottom:10px;">Resumo</div>${renderKeyValueGrid(
           summaryRows
         )}`,
         pageIndex++
@@ -671,7 +671,7 @@ export function DashboardScreen() {
         if (parts.length === 0) {
           await addPageFromHtml(
             "Relatório do Dashboard",
-            `<div style="font-size:14px; font-weight:700; color:#111C4E; margin-bottom:10px;">${escapeHtml(
+            `<div style="font-size:14px; font-weight:700; color:hsl(var(--brand-navy)); margin-bottom:10px;">${escapeHtml(
               section.title
             )}</div>${renderTable(["Categoria", "Quantidade"], [])}`,
             pageIndex++
@@ -686,7 +686,7 @@ export function DashboardScreen() {
               : section.title;
           await addPageFromHtml(
             "Relatório do Dashboard",
-            `<div style="font-size:14px; font-weight:700; color:#111C4E; margin-bottom:10px;">${escapeHtml(
+            `<div style="font-size:14px; font-weight:700; color:hsl(var(--brand-navy)); margin-bottom:10px;">${escapeHtml(
               partTitle
             )}</div>${renderTable(
               ["Categoria", "Quantidade"],
@@ -707,7 +707,7 @@ export function DashboardScreen() {
       if (reportParts.length === 0) {
         await addPageFromHtml(
           "Relatório do Dashboard",
-          `<div style="font-size:14px; font-weight:700; color:#111C4E; margin-bottom:10px;">Relatórios Recentes</div>${renderTable(
+          `<div style="font-size:14px; font-weight:700; color:hsl(var(--brand-navy)); margin-bottom:10px;">Relatórios Recentes</div>${renderTable(
             ["Aluno", "Escola", "Data", "Status"],
             []
           )}`,
@@ -721,7 +721,7 @@ export function DashboardScreen() {
               : "Relatórios Recentes";
           await addPageFromHtml(
             "Relatório do Dashboard",
-            `<div style="font-size:14px; font-weight:700; color:#111C4E; margin-bottom:10px;">${escapeHtml(
+            `<div style="font-size:14px; font-weight:700; color:hsl(var(--brand-navy)); margin-bottom:10px;">${escapeHtml(
               partTitle
             )}</div>${renderTable(
               ["Aluno", "Escola", "Data", "Status"],
@@ -756,7 +756,7 @@ export function DashboardScreen() {
   return (
     <div className="flex-1 space-y-4 p-4 md:p-8 pt-6">
       <div className="flex items-center justify-between space-y-2">
-        <h2 className="text-3xl font-bold tracking-tight text-[#111C4E]">
+        <h2 className="text-3xl font-bold tracking-tight text-brand-navy">
           Dashboard
         </h2>
         <Button
@@ -948,11 +948,11 @@ export function DashboardScreen() {
           <div className="relative z-10 flex flex-col md:flex-row gap-6 items-start md:items-center justify-between border-b border-gray-100 pb-6 mb-6">
             <div>
               <div className="flex items-center gap-3 mb-2">
-                <div className="w-12 h-12 bg-gradient-to-r from-[#0071CE] to-[#19D3C5] rounded-xl flex items-center justify-center shadow-lg">
+                <div className="w-12 h-12 bg-gradient-to-r from-brand-navy-light to-brand-orange rounded-xl flex items-center justify-center shadow-lg">
                   <Brain className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-[#111C4E]">
+                  <h3 className="text-2xl font-bold text-brand-navy">
                     Relatórios Biopsicossociais
                   </h3>
                   <p className="text-gray-500 text-sm">
@@ -964,7 +964,7 @@ export function DashboardScreen() {
 
             <div className="flex flex-wrap gap-4 md:gap-6 bg-slate-50 p-4 rounded-xl border border-slate-100 shadow-inner w-full md:w-auto justify-center md:justify-end">
               <div className="text-center px-4">
-                <p className="text-3xl font-bold text-[#111C4E]">
+                <p className="text-3xl font-bold text-brand-navy">
                   {state.estatisticas?.totalReports.toString() ?? "0"}
                 </p>
                 <p className="text-[11px] font-bold text-slate-500 uppercase tracking-wider mt-1">
@@ -1010,7 +1010,7 @@ export function DashboardScreen() {
                 <div className="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center">
                   <User className="w-5 h-5" />
                 </div>
-                <h4 className="font-bold text-[#111C4E] text-lg">
+                <h4 className="font-bold text-brand-navy text-lg">
                   Psicólogo(a)
                 </h4>
               </div>
@@ -1058,7 +1058,7 @@ export function DashboardScreen() {
                 <div className="w-10 h-10 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center">
                   <BookOpen className="w-5 h-5" />
                 </div>
-                <h4 className="font-bold text-[#111C4E] text-lg">
+                <h4 className="font-bold text-brand-navy text-lg">
                   Psicopedagogo(a)
                 </h4>
               </div>
@@ -1107,7 +1107,7 @@ export function DashboardScreen() {
                 <div className="w-10 h-10 rounded-lg bg-teal-50 text-teal-600 flex items-center justify-center">
                   <Users className="w-5 h-5" />
                 </div>
-                <h4 className="font-bold text-[#111C4E] text-lg">
+                <h4 className="font-bold text-brand-navy text-lg">
                   Assistente Social
                 </h4>
               </div>
@@ -1785,7 +1785,7 @@ export function DashboardScreen() {
             <div className="space-y-1">
               <div className="flex items-start justify-between gap-6">
                 <div>
-                  <h1 className="text-2xl font-bold text-[#111C4E]">
+                  <h1 className="text-2xl font-bold text-brand-navy">
                     Relatório do Dashboard
                   </h1>
                   <p className="text-sm text-slate-600">
@@ -1876,7 +1876,7 @@ export function DashboardScreen() {
             </div>
 
             <div className="space-y-3">
-              <h2 className="text-lg font-semibold text-[#111C4E]">Resumo</h2>
+              <h2 className="text-lg font-semibold text-brand-navy">Resumo</h2>
               <div className="grid grid-cols-2 gap-3 text-sm">
                 <div className="flex items-center justify-between rounded-md border p-3">
                   <span>Total de alunos</span>
@@ -1941,7 +1941,7 @@ export function DashboardScreen() {
             </div>
 
             <div className="space-y-4">
-              <h2 className="text-lg font-semibold text-[#111C4E]">
+              <h2 className="text-lg font-semibold text-brand-navy">
                 Distribuições e Totais
               </h2>
 
@@ -2032,7 +2032,7 @@ export function DashboardScreen() {
             </div>
 
             <div className="space-y-2">
-              <h2 className="text-lg font-semibold text-[#111C4E]">
+              <h2 className="text-lg font-semibold text-brand-navy">
                 Relatórios Recentes
               </h2>
               <div className="overflow-hidden rounded-md border">

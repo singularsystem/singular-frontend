@@ -189,7 +189,7 @@ export default function QuestionarioPsicopedagogoPage() {
           >
             <ArrowLeft className="h-4 w-4" />
           </Button>
-          <h1 className="text-3xl font-bold tracking-tight text-[#111C4E]">
+          <h1 className="text-3xl font-bold tracking-tight text-brand-navy">
             Questionário Psicopedagógico
           </h1>
         </div>
@@ -198,7 +198,7 @@ export default function QuestionarioPsicopedagogoPage() {
             onClick={() => {
               setOpenSelecaoStudents(true);
             }}
-            className="bg-[#111C4E] hover:bg-blue-800"
+            className="bg-brand-navy hover:bg-blue-800"
           >
             <Plus className="mr-2 h-4 w-4" />
             Novo Questionário

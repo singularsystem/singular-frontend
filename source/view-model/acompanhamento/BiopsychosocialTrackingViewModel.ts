@@ -46,7 +46,7 @@ export class BiopsychosocialTrackingViewModel {
   restoreStateFromSession() {
     if (typeof window !== "undefined") {
       try {
-        const saved = sessionStorage.getItem("ipaags_biopsychosocial_tracking_state");
+        const saved = sessionStorage.getItem("singular_biopsychosocial_tracking_state");
         if (saved) {
           const parsed = JSON.parse(saved);
           if (parsed) {
@@ -66,7 +66,7 @@ export class BiopsychosocialTrackingViewModel {
     if (typeof window !== "undefined") {
       try {
         sessionStorage.setItem(
-          "ipaags_biopsychosocial_tracking_state",
+          "singular_biopsychosocial_tracking_state",
           JSON.stringify({
             currentPage: this.state.currentPage,
             pageSize: this.state.pageSize,

@@ -64,7 +64,7 @@ export function generatePDFAlternative(elementId: string, filename: string) {
         <body>
           <div class="print-container">
             <div class="header">
-              <h1>Instituto Piauiense de Assistência, Auditoria e Gestão em Saúde</h1>
+              <h1>Singular System</h1>
               <h2>Relatório Biopsicossocial</h2>
             </div>
             ${element.innerHTML}
@@ -72,7 +72,7 @@ export function generatePDFAlternative(elementId: string, filename: string) {
               <p>Relatório gerado em ${new Date().toLocaleDateString(
                 "pt-BR"
               )} às ${new Date().toLocaleTimeString("pt-BR")}</p>
-              <p>Sistema AEE - IPAAGS</p>
+              <p>Singular System - Gestão Especializada em AEE</p>
             </div>
           </div>
           <script>

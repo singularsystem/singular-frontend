@@ -3,7 +3,7 @@ import json
 
 INPUT_HTML = r"C:\Users\orran\Downloads\PEI\PEI\MATEMATICA\MATEMATICA_9ano.html"
 OUTPUT_JSON = (
-    r"C:\Users\orran\Documents\GitHub\ipaags-frontend\lib\MATEMATICA_9ano.json"
+    r"C:\Users\orran\Documents\GitHub\singular-frontend\lib\MATEMATICA_9ano.json"
 )
 
 

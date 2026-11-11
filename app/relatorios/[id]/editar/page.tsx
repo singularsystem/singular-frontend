@@ -429,7 +429,7 @@ export default function EditarRelatorioBiopsicossocial({
           >
             <ArrowLeft className="h-4 w-4" />
           </Button>
-          <h1 className="text-3xl font-bold tracking-tight text-[#111C4E]">
+          <h1 className="text-3xl font-bold tracking-tight text-brand-navy">
             Editar Relatório Biopsicossocial
           </h1>
         </div>
@@ -1060,7 +1060,7 @@ export default function EditarRelatorioBiopsicossocial({
                           id="card-title"
                           className="text-2xl font-bold text-purple-900"
                         >
-                          Questionário IPAAGS
+                          Questionário de Triagem
                         </div>
                       </div>
                       <div
@@ -1238,7 +1238,7 @@ export default function EditarRelatorioBiopsicossocial({
           <Button
             type="submit"
             disabled={isLoading}
-            className=" bg-[#111C4E] hover:bg-blue-800"
+            className=" bg-brand-navy hover:bg-blue-800"
           >
             {isLoading ? "Salvando..." : "Salvar Relatório"}
           </Button>

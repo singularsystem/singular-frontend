@@ -42,7 +42,7 @@ export function SidebarNavItem({
         className={cn(
           "w-full flex items-center space-x-3 p-3 rounded-xl transition-all duration-300",
           isActive
-            ? "bg-gradient-to-r from-[#0071CE] to-[#19D3C5] shadow-lg text-white"
+            ? "bg-brand-orange text-brand-navy font-semibold shadow-md"
             : "text-gray-400 hover:bg-white/10 hover:text-white",
           isCollapsed && "justify-center",
         )}
@@ -81,7 +81,7 @@ export function SidebarNavItem({
                   className={cn(
                     "w-full flex items-center justify-center p-3 rounded-xl transition-all duration-300",
                     hasActiveChild &&
-                      "bg-gradient-to-r from-[#0071CE] to-[#19D3C5] text-white shadow-lg",
+                      "bg-brand-orange text-brand-navy font-semibold shadow-md",
                     !hasActiveChild &&
                       "text-gray-400 hover:bg-white/10 hover:text-white",
                   )}
@@ -99,7 +99,7 @@ export function SidebarNavItem({
           {isOpen && (
             <div
               ref={popupRef}
-              className="absolute left-full top-0 ml-4 w-56 bg-[#111C4E] border border-white/10 rounded-xl shadow-2xl z-50 overflow-hidden animate-in fade-in slide-in-from-left-2 duration-200"
+              className="absolute left-full top-0 ml-4 w-56 bg-brand-navy border border-white/10 rounded-xl shadow-2xl z-50 overflow-hidden animate-in fade-in slide-in-from-left-2 duration-200"
             >
               <div className="p-3 border-b border-white/5 bg-white/5">
                 <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">
@@ -115,7 +115,7 @@ export function SidebarNavItem({
                     className={cn(
                       "flex items-center space-x-3 px-4 py-3 text-sm transition-all",
                       pathname === sub.href || (sub.href === "/livros/gerar" && pathname.startsWith("/livros"))
-                        ? "text-[#19D3C5] bg-white/5 font-medium"
+                        ? "text-brand-orange bg-white/5 font-semibold"
                         : "text-gray-300 hover:bg-white/10 hover:text-white",
                     )}
                   >
@@ -153,7 +153,7 @@ export function SidebarNavItem({
                     className={cn(
                       "flex items-center space-x-3 p-3 rounded-lg text-sm transition-all",
                       activeChild
-                        ? "bg-gradient-to-r from-[#0071CE] to-[#19D3C5] shadow-lg text-white"
+                        ? "bg-brand-orange text-brand-navy font-semibold shadow-md"
                         : "text-gray-400 hover:bg-white/10 hover:text-white",
                     )}
                   >

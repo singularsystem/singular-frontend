@@ -1,0 +1,27 @@
+[
+  {
+    "glob": "lib/brand/legacy-colors.ts",
+    "pattern": ".*",
+    "reason": "Definição do codemod e catálogo de cores legadas para migração"
+  },
+  {
+    "glob": "lib/brand/legacy-scanner.ts",
+    "pattern": ".*",
+    "reason": "Definição do scanner e catálogo de termos e cores legadas"
+  },
+  {
+    "glob": "lib/pei-historia.ts",
+    "pattern": "prefeitura",
+    "reason": "Conteúdo pedagógico da BNCC referente à história dos municípios, não é marca do sistema"
+  },
+  {
+    "glob": ".kiro/**",
+    "pattern": ".*",
+    "reason": "Documentação interna, especificações e histórico de ADRs do projeto"
+  },
+  {
+    "glob": "docs/**",
+    "pattern": ".*",
+    "reason": "Documentação arquitetural de histórico de migração"
+  }
+]

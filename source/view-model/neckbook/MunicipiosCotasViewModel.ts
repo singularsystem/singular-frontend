@@ -13,7 +13,7 @@ import {
   extractFieldErrorsFromDetails,
 } from "@/source/infrastructure/neckbook/NeckbookAdminErrorParser";
 
-export const SESSION_STORAGE_KEY = "ipaags_neckbook_cotas_state";
+export const SESSION_STORAGE_KEY = "singular_neckbook_cotas_state";
 export const DEFAULT_PAGE = 1;
 export const DEFAULT_PAGE_SIZE = 15;
 export const DEFAULT_SEARCH_TERM = "";

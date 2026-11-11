@@ -160,7 +160,7 @@ export function AlunosScreen() {
   return (
     <main className="flex-1 p-6 bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] overflow-hidden">
       <div className="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-4">
-        <h1 className="text-3xl font-bold tracking-tight text-[#111C4E]">
+        <h1 className="text-3xl font-bold tracking-tight text-brand-navy">
           Alunos
         </h1>
         <div className="flex flex-wrap gap-2">
@@ -251,7 +251,7 @@ export function AlunosScreen() {
           {(isAdmin || isSecretary) && (
             <Button
               onClick={() => router.push("/alunos/cadastro")}
-              className="bg-[#111C4E] hover:bg-blue-800"
+              className="bg-brand-navy hover:bg-blue-800"
             >
               <Plus className="mr-2 h-4 w-4" />
               Novo Aluno
@@ -290,7 +290,7 @@ export function AlunosScreen() {
               <TableHead>Série</TableHead>
               <TableHead>Município</TableHead>
               <TableHead>Estado</TableHead>
-              <TableHead className="w-[150px] text-center text-[#111C4E] font-bold">Ações</TableHead>
+              <TableHead className="w-[150px] text-center text-brand-navy font-bold">Ações</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -299,7 +299,7 @@ export function AlunosScreen() {
             ) : listState.alunos.length > 0 ? (
               listState.alunos.map((aluno) => (
                 <TableRow key={aluno.id}>
-                  <TableCell className="font-medium text-[#111C4E]">{aluno.fullName}</TableCell>
+                  <TableCell className="font-medium text-brand-navy">{aluno.fullName}</TableCell>
                   <TableCell className="text-gray-800">{aluno.dataNascimento}</TableCell>
                   <TableCell className="text-gray-800">{aluno.schoolName}</TableCell>
                   <TableCell className="text-gray-800">{aluno.serie}</TableCell>

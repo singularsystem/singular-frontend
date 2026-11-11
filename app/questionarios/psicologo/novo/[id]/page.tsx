@@ -174,14 +174,14 @@ export default function NovoQuestionarioPsicologo({
       console.log(created);
 
       toast({
-        title: "Questionário IPAAGS salvo",
-        description: "Questionário IPAAGS foi salvo com sucesso.",
+        title: "Questionário de Triagem salvo",
+        description: "Questionário de Triagem foi salvo com sucesso.",
         variant: "success",
       });
 
       router.push(`/relatorios/novo/${relatorio?.id}`);
     } catch (error) {
-      console.error("Erro ao salvar Questionário IPAAGS:", error);
+      console.error("Erro ao salvar Questionário de Triagem:", error);
 
       toast({
         variant: "destructive",
@@ -212,7 +212,7 @@ export default function NovoQuestionarioPsicologo({
             <ArrowLeft className="h-4 w-4" />
           </Button>
           <h1 className="text-3xl font-bold tracking-tight">
-            Novo Questionário IPAAGS
+            Novo Questionário de Triagem
           </h1>
         </div>
       </div>
@@ -220,7 +220,7 @@ export default function NovoQuestionarioPsicologo({
       <form>
         <Card>
           <CardHeader>
-            <CardTitle>Questionário IPAAGS</CardTitle>
+            <CardTitle>Questionário de Triagem</CardTitle>
             <CardDescription>
               Preencha as informações da avaliação
             </CardDescription>
@@ -233,7 +233,7 @@ export default function NovoQuestionarioPsicologo({
               )
               .map((section) => (
                 <div key={section.title} className="space-y-6">
-                  <h3 className="text-xl font-semibold text-[#111C4E] border-b pb-2">
+                  <h3 className="text-xl font-semibold text-brand-navy border-b pb-2">
                     {section.title}
                   </h3>
 
@@ -276,7 +276,7 @@ export default function NovoQuestionarioPsicologo({
             <div className="mt-6 mb-20 flex justify-end">
               <Button
                 type="submit"
-                className="bg-[#111C4E] hover:bg-blue-800"
+                className="bg-brand-navy hover:bg-blue-800"
                 disabled={isLoading}
                 onClick={handleSubmit}
               >

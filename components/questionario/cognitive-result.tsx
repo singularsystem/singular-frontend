@@ -70,7 +70,7 @@ export function CognitiveAssessmentResultCard({
 
   return (
     <Card className="bg-white shadow-lg border-teal-200 mb-10">
-      <CardHeader className="text-center bg-gradient-to-r from-teal-100 to-cyan-100 border-b">
+      <CardHeader className="text-center bg-brand-ice border-b">
         <div className="flex items-center justify-center mb-4">
           <CheckCircle className="w-12 h-12 text-teal-600" />
         </div>
@@ -89,10 +89,10 @@ export function CognitiveAssessmentResultCard({
             </CardContent>
           </Card>
 
-          <Card className="bg-cyan-50 border-cyan-200">
+          <Card className="bg-brand-ice border-brand-navy/10">
             <CardContent className="p-6 text-center">
-              <p className="text-sm text-cyan-700 mb-2">Percentual</p>
-              <p className="text-4xl font-bold text-cyan-900">
+              <p className="text-sm text-brand-navy-light mb-2">Percentual</p>
+              <p className="text-4xl font-bold text-brand-navy">
                 {questionario.percentage?.toFixed(1)}%
               </p>
             </CardContent>

@@ -58,8 +58,8 @@ export default function QuestionarioPsicologo({
           <Button variant="outline" size="icon" onClick={back}>
             <ArrowLeft className="h-4 w-4" />
           </Button>
-          <h1 className="text-3xl font-bold tracking-tight text-[#111C4E]">
-            Questionário IPAAGS
+          <h1 className="text-3xl font-bold tracking-tight text-brand-navy">
+            Questionário de Triagem
           </h1>
         </div>
         <div>
@@ -96,7 +96,7 @@ export default function QuestionarioPsicologo({
               )
               .map((section) => (
                 <div key={section.title} className="space-y-6">
-                  <h3 className="text-xl font-semibold text-[#111C4E] border-b pb-2">
+                  <h3 className="text-xl font-semibold text-brand-navy border-b pb-2">
                     {section.title}
                   </h3>
 

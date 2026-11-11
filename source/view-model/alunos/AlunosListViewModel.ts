@@ -43,7 +43,7 @@ export class AlunosListViewModel {
   restoreStateFromSession() {
     if (typeof window !== "undefined") {
       try {
-        const saved = sessionStorage.getItem("ipaags_alunos_list_state");
+        const saved = sessionStorage.getItem("singular_alunos_list_state");
         if (saved) {
           const parsed = JSON.parse(saved);
           if (parsed) {
@@ -69,7 +69,7 @@ export class AlunosListViewModel {
   private saveStateToSession() {
     if (typeof window !== "undefined") {
       try {
-        sessionStorage.setItem("ipaags_alunos_list_state", JSON.stringify({
+        sessionStorage.setItem("singular_alunos_list_state", JSON.stringify({
           currentPage: this.state.currentPage,
           pageSize: this.state.pageSize,
           filters: this.state.filters,

@@ -145,7 +145,7 @@ export function GenerateApiKeyModal({
                 size="sm"
                 onClick={handleCopy}
                 data-testid="copy-token-button"
-                className="shrink-0 bg-[#111C4E] hover:bg-blue-800 text-white"
+                className="shrink-0 bg-brand-navy hover:bg-blue-800 text-white"
               >
                 {copied ? (
                   <>

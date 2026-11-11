@@ -467,7 +467,7 @@ export default function NovoQuestionarioPsicopedagogo({
             <div className="mt-6 mb-20 flex justify-end">
               <Button
                 type="submit"
-                className="bg-[#111C4E] hover:bg-blue-800"
+                className="bg-brand-navy hover:bg-blue-800"
                 disabled={isLoading}
                 onClick={handleSubmit}
               >

@@ -46,7 +46,7 @@ export class EscolasListViewModel {
   restoreStateFromSession() {
     if (typeof window !== "undefined") {
       try {
-        const saved = sessionStorage.getItem("ipaags_escolas_list_state");
+        const saved = sessionStorage.getItem("singular_escolas_list_state");
         if (saved) {
           const parsed = JSON.parse(saved);
           if (parsed) {
@@ -66,7 +66,7 @@ export class EscolasListViewModel {
   private saveStateToSession() {
     if (typeof window !== "undefined") {
       try {
-        sessionStorage.setItem("ipaags_escolas_list_state", JSON.stringify({
+        sessionStorage.setItem("singular_escolas_list_state", JSON.stringify({
           currentPage: this.state.currentPage,
           pageSize: this.state.pageSize,
           searchTerm: this.state.searchTerm,

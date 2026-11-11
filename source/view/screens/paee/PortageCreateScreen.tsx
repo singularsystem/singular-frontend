@@ -327,11 +327,11 @@ export function PortageCreateScreen({ id }: PortageCreateScreenProps) {
 
               return (
                 <Card className="w-[850px]" key={currentIndex}>
-                  <CardHeader className="text-[#111C4E]">
+                  <CardHeader className="text-brand-navy">
                     <CardTitle className="uppercase text-xl font-semibold">
                       {pergunta.category}
                     </CardTitle>
-                    <CardDescription className="text-[#111C4E] font-medium">
+                    <CardDescription className="text-brand-navy font-medium">
                       Pergunta {currentIndex + 1} de{" "}
                       {portageData[faixaSelecionada].length}
                     </CardDescription>
@@ -443,7 +443,7 @@ export function PortageCreateScreen({ id }: PortageCreateScreenProps) {
                     </button>
 
                     <button
-                      className={`px-4 py-2 text-sm font-medium bg-[#111C4E] text-white rounded-md hover:bg-[#1c2c6e] ${
+                      className={`px-4 py-2 text-sm font-medium bg-brand-navy text-white rounded-md hover:bg-brand-navy-light ${
                         currentIndex < perguntas.length - 1
                           ? "visible"
                           : "invisible"
@@ -459,7 +459,7 @@ export function PortageCreateScreen({ id }: PortageCreateScreenProps) {
 
                     <button
                       disabled={isSaving}
-                      className={`px-4 py-2 text-sm font-medium bg-[#111C4E] text-white rounded-md hover:bg-[#1c2c6e] ${
+                      className={`px-4 py-2 text-sm font-medium bg-brand-navy text-white rounded-md hover:bg-brand-navy-light ${
                         currentIndex === perguntas.length - 1
                           ? "block"
                           : "hidden"

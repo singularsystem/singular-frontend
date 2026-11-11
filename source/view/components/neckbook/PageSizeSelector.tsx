@@ -48,7 +48,7 @@ export function PageSizeSelector({
           value={pageSize}
           disabled={disabled}
           onChange={(e) => onPageSizeChange(Number(e.target.value))}
-          className="rounded-md border border-slate-300 bg-white px-2.5 py-1.5 text-sm font-medium text-slate-800 shadow-sm focus:border-[#111C4E] focus:outline-none focus:ring-1 focus:ring-[#111C4E]"
+          className="rounded-md border border-slate-300 bg-white px-2.5 py-1.5 text-sm font-medium text-slate-800 shadow-sm focus:border-brand-navy focus:outline-none focus:ring-1 focus:ring-brand-navy"
         >
           {PAGE_SIZE_OPTIONS.map((size) => (
             <option key={size} value={size}>

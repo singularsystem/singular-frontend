@@ -32,7 +32,7 @@ export function CognitiveAssessmentQuestion({
 
   return (
     <div className="space-y-4 p-4">
-      <Label className="block text-lg text-[#0a112f]">{label}</Label>
+      <Label className="block text-lg text-brand-navy">{label}</Label>
 
       <RadioGroup
         value={value}

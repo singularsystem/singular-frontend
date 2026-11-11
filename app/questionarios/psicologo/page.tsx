@@ -117,7 +117,7 @@ export default function QuestionarioPsicologoPage() {
     router.push(`/questionarios/psicologo/novo/${aluno.id}`);
     toast({
       title: "Iniciando questionário",
-      description: "Você está iniciando um novo questionário IPAAGS.",
+      description: "Você está iniciando um novo questionário de triagem.",
       variant: "info",
     });
   };
@@ -188,8 +188,8 @@ export default function QuestionarioPsicologoPage() {
           >
             <ArrowLeft className="h-4 w-4" />
           </Button>
-          <h1 className="text-3xl font-bold tracking-tight text-[#111C4E]">
-            Questionário IPAAGS
+          <h1 className="text-3xl font-bold tracking-tight text-brand-navy">
+            Questionário de Triagem
           </h1>
         </div>
         <div className="flex gap-2">
@@ -197,7 +197,7 @@ export default function QuestionarioPsicologoPage() {
             onClick={() => {
               setOpenSelecaoStudents(true);
             }}
-            className="bg-[#111C4E] hover:bg-blue-800"
+            className="bg-brand-navy hover:bg-blue-800"
           >
             <Plus className="mr-2 h-4 w-4" />
             Novo Questionário
@@ -318,7 +318,7 @@ export default function QuestionarioPsicologoPage() {
         open={openSelecaoStudents}
         onOpenChange={setOpenSelecaoStudents}
         handleStart={handleNewQuestionnaire}
-        documentName="Questionário IPAAGS"
+        documentName="Questionário de Triagem"
       />
       <Dialog open={showConfirm} onOpenChange={setShowConfirm}>
         <DialogContent>

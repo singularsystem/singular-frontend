@@ -141,7 +141,7 @@ export function BiopsychosocialTrackingScreen() {
       {/* Header section */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
-          <h1 className="text-3xl font-bold tracking-tight text-[#111C4E]">
+          <h1 className="text-3xl font-bold tracking-tight text-brand-navy">
             Acompanhamento Biopsicossocial
           </h1>
           <p className="text-sm text-gray-500 mt-1">
@@ -182,7 +182,7 @@ export function BiopsychosocialTrackingScreen() {
           </div>
           <div className="text-sm text-gray-500 whitespace-nowrap self-end sm:self-center">
             Relatórios encontrados:{" "}
-            <span className="font-semibold text-[#111C4E]">
+            <span className="font-semibold text-brand-navy">
               {listState.uniqueTotal ?? 0}
             </span>
           </div>

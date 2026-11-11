@@ -348,7 +348,7 @@ export function PaeeFormScreen({ id, isEdit }: PaeeFormScreenProps) {
           >
             <ArrowLeft className="h-4 w-4" />
           </Button>
-          <h1 className="text-3xl font-bold tracking-tight text-[#111C4E]">
+          <h1 className="text-3xl font-bold tracking-tight text-brand-navy">
             PAEE
           </h1>
         </div>
@@ -912,7 +912,7 @@ export function PaeeFormScreen({ id, isEdit }: PaeeFormScreenProps) {
               <Button
                 type="submit"
                 disabled={isSaving}
-                className=" bg-[#111C4E] hover:bg-blue-800"
+                className=" bg-brand-navy hover:bg-blue-800"
               >
                 {isSaving ? "Salvando..." : "Salvar Plano"}
               </Button>

@@ -40,7 +40,7 @@ export default function Questionarios() {
   return (
     <main className="flex-1 p-6">
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-3xl font-bold tracking-tight text-[#111C4E]">
+        <h1 className="text-3xl font-bold tracking-tight text-brand-navy">
           Questionários
         </h1>
       </div>
@@ -61,7 +61,7 @@ export default function Questionarios() {
             <CardContent></CardContent>
             <CardFooter>
               <Button
-                className="w-full bg-[#111C4E] hover:bg-blue-800"
+                className="w-full bg-brand-navy hover:bg-blue-800"
                 onClick={handleNavigateSNAPIV}
               >
                 <Route className="mr-2 h-4 w-4" />
@@ -84,7 +84,7 @@ export default function Questionarios() {
             <CardContent></CardContent>
             <CardFooter>
               <Button
-                className="w-full bg-[#111C4E] hover:bg-blue-800"
+                className="w-full bg-brand-navy hover:bg-blue-800"
                 onClick={handleNavigateNeuropsychopedagogical}
               >
                 <Route className="mr-2 h-4 w-4" />
@@ -109,7 +109,7 @@ export default function Questionarios() {
             <CardContent></CardContent>
             <CardFooter>
               <Button
-                className="w-full bg-[#111C4E] hover:bg-blue-800"
+                className="w-full bg-brand-navy hover:bg-blue-800"
                 onClick={handleNavigateCarsChildhood}
               >
                 <Route className="mr-2 h-4 w-4" />
@@ -135,7 +135,7 @@ export default function Questionarios() {
             <CardContent></CardContent>
             <CardFooter>
               <Button
-                className="w-full bg-[#111C4E] hover:bg-blue-800"
+                className="w-full bg-brand-navy hover:bg-blue-800"
                 onClick={handleNavigateMCHATR}
               >
                 <Route className="mr-2 h-4 w-4" />
@@ -161,7 +161,7 @@ export default function Questionarios() {
             <CardContent></CardContent>
             <CardFooter>
               <Button
-                className="w-full bg-[#111C4E] hover:bg-blue-800"
+                className="w-full bg-brand-navy hover:bg-blue-800"
                 onClick={handleNavigateMCHATRF}
               >
                 <Route className="mr-2 h-4 w-4" />

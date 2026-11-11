@@ -127,7 +127,7 @@ export default function AvaliacaoPEI({
           <Button variant="outline" size="icon" onClick={back}>
             <ArrowLeft className="h-4 w-4" />
           </Button>
-          <h1 className="text-3xl font-bold tracking-tight text-[#111C4E]">
+          <h1 className="text-3xl font-bold tracking-tight text-brand-navy">
             Avaliação PEI
           </h1>
         </div>

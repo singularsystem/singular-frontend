@@ -62,7 +62,7 @@ export function DashboardHeader({ onMenuToggle }: DashboardHeaderProps) {
             onClick={onMenuToggle}
             className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200"
           >
-            <Menu className="w-5 h-5 text-[#111C4E]" />
+            <Menu className="w-5 h-5 text-brand-navy" />
           </button> */}
         </div>
 
@@ -70,11 +70,11 @@ export function DashboardHeader({ onMenuToggle }: DashboardHeaderProps) {
           {/* Botão Central de Ajuda / FAQ */}
           <Link
             href="/ajuda"
-            className="p-2 rounded-xl hover:bg-gray-100 transition-colors duration-200 text-[#111C4E] flex items-center justify-center"
+            className="p-2 rounded-xl hover:bg-gray-100 transition-colors duration-200 text-brand-navy flex items-center justify-center"
             title="Central de Ajuda / FAQ"
             aria-label="Central de Ajuda"
           >
-            <HelpCircle className="w-5 h-5 text-[#111C4E]" />
+            <HelpCircle className="w-5 h-5 text-brand-navy" />
           </Link>
 
           {/* Botão do sino */}
@@ -84,9 +84,9 @@ export function DashboardHeader({ onMenuToggle }: DashboardHeaderProps) {
               className="relative p-2 rounded-xl hover:bg-gray-100 transition-colors duration-200"
               aria-label="Notificações"
             >
-              <Bell className="w-5 h-5 text-[#111C4E]" />
+              <Bell className="w-5 h-5 text-brand-navy" />
               {unreadCount > 0 && (
-                <span className="absolute -top-1 -right-1 w-5 h-5 bg-gradient-to-r from-[#0071CE] to-[#19D3C5] rounded-full flex items-center justify-center text-white text-xs font-bold">
+                <span className="absolute -top-1 -right-1 w-5 h-5 bg-gradient-to-r from-brand-navy-light to-brand-orange rounded-full flex items-center justify-center text-white text-xs font-bold">
                   {unreadCount > 9 ? "9+" : unreadCount}
                 </span>
               )}
@@ -96,7 +96,7 @@ export function DashboardHeader({ onMenuToggle }: DashboardHeaderProps) {
             {isNotifMenuOpen && (
               <div className="absolute -right-6 mt-2 w-80 max-h-96 overflow-auto bg-white rounded-xl shadow-lg border border-gray-100 z-50">
                 <div className="p-4 border-b border-gray-200 flex justify-between items-center">
-                  <h3 className="font-semibold text-[#111C4E]">Notificações</h3>
+                  <h3 className="font-semibold text-brand-navy">Notificações</h3>
                   {unreadNotifications.length > 0 && (
                     <button
                       onClick={handleMarkAllAsRead}
@@ -139,13 +139,13 @@ export function DashboardHeader({ onMenuToggle }: DashboardHeaderProps) {
               onClick={toggleUserMenu}
               className="flex items-center space-x-3 p-2 rounded-xl hover:bg-gray-100 transition-colors duration-200 cursor-pointer"
             >
-              <div className="w-8 h-8 bg-gradient-to-r from-[#0071CE] to-[#19D3C5] rounded-full flex items-center justify-center">
+              <div className="w-8 h-8 bg-gradient-to-r from-brand-navy-light to-brand-orange rounded-full flex items-center justify-center">
                 <User className="w-4 h-4 text-white" />
               </div>
 
               {user && (
                 <div className="hidden md:block">
-                  <p className="text-sm font-medium text-[#111C4E]">
+                  <p className="text-sm font-medium text-brand-navy">
                     {user.userName}
                   </p>
                   <p className="text-xs text-gray-500">
@@ -173,11 +173,11 @@ export function DashboardHeader({ onMenuToggle }: DashboardHeaderProps) {
               >
                 <div className="py-3 border-b border-gray-100">
                   <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-gradient-to-r from-[#0071CE] to-[#19D3C5] rounded-full flex items-center justify-center">
+                    <div className="w-10 h-10 bg-gradient-to-r from-brand-navy-light to-brand-orange rounded-full flex items-center justify-center">
                       <User className="w-5 h-5 text-white" />
                     </div>
                     <div className="max-w-[calc(100%-3rem)] break-words">
-                      <p className="text-sm font-medium text-[#111C4E]">
+                      <p className="text-sm font-medium text-brand-navy">
                         {user?.userName}
                       </p>
                       <p className="text-xs text-gray-500">{user?.email}</p>
@@ -189,10 +189,10 @@ export function DashboardHeader({ onMenuToggle }: DashboardHeaderProps) {
                   <Link
                     href="/perfil"
                     onClick={toggleUserMenu}
-                    className="w-full flex items-center space-x-3 px-4 py-2 text-sm text-[#111C4E] hover:bg-gray-50 transition-colors duration-200 group"
+                    className="w-full flex items-center space-x-3 px-4 py-2 text-sm text-brand-navy hover:bg-gray-50 transition-colors duration-200 group"
                   >
-                    <Settings className="w-4 h-4 text-gray-400 group-hover:text-[#0071CE]" />
-                    <span className="group-hover:text-[#0071CE]">
+                    <Settings className="w-4 h-4 text-gray-400 group-hover:text-brand-link" />
+                    <span className="group-hover:text-brand-link">
                       Meu Perfil
                     </span>
                   </Link>
@@ -200,10 +200,10 @@ export function DashboardHeader({ onMenuToggle }: DashboardHeaderProps) {
                   <Link
                     href="/ajuda"
                     onClick={toggleUserMenu}
-                    className="w-full flex items-center space-x-3 px-4 py-2 text-sm text-[#111C4E] hover:bg-gray-50 transition-colors duration-200 group"
+                    className="w-full flex items-center space-x-3 px-4 py-2 text-sm text-brand-navy hover:bg-gray-50 transition-colors duration-200 group"
                   >
-                    <HelpCircle className="w-4 h-4 text-gray-400 group-hover:text-[#0071CE]" />
-                    <span className="group-hover:text-[#0071CE]">
+                    <HelpCircle className="w-4 h-4 text-gray-400 group-hover:text-brand-link" />
+                    <span className="group-hover:text-brand-link">
                       Central de Ajuda
                     </span>
                   </Link>

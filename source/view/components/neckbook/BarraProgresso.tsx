@@ -46,7 +46,7 @@ export function BarraProgresso({
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
           {!isCompleted && !isFailed && (
-            <Loader2 className="h-5 w-5 animate-spin text-[#111C4E]" />
+            <Loader2 className="h-5 w-5 animate-spin text-brand-navy" />
           )}
           {isCompleted && (
             <CheckCircle2 className="h-5 w-5 text-emerald-600" />
@@ -65,7 +65,7 @@ export function BarraProgresso({
           >
             {statusConfig.label}
           </Badge>
-          <span className="font-bold text-sm text-[#111C4E]">{percent}%</span>
+          <span className="font-bold text-sm text-brand-navy">{percent}%</span>
         </div>
       </div>
 
@@ -79,7 +79,7 @@ export function BarraProgresso({
           </div>
           <Button
             asChild
-            className="bg-[#111C4E] hover:bg-[#111C4E]/90 text-white font-medium text-xs px-4"
+            className="bg-brand-navy hover:bg-brand-navy/90 text-white font-medium text-xs px-4"
           >
             <a href={pdfUrl} target="_blank" rel="noopener noreferrer">
               <Download className="h-4 w-4 mr-1.5" />

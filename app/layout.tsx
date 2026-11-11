@@ -9,9 +9,16 @@ import { AuthProvider } from "@/contexts/auth-context";
 import { NavigationProvider } from "@/contexts/navigation-context";
 import { NotificationProvider } from "@/contexts/notification-context";
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { DM_Sans, Poppins } from "next/font/google";
 import "./accessibility.css";
 import "./globals.css";
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-dm-sans",
+  display: "swap",
+});
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -21,8 +28,13 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Sistema AEE - IPAAGS",
-  description: "Sistema de Atendimento Educacional Especializado",
+  title: "Singular System - Gestão Especializada em AEE",
+  description:
+    "Singular System: plataforma de gestão especializada em Atendimento Educacional Especializado (AEE).",
+  applicationName: "Singular System",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -35,7 +47,7 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
-      <body className={poppins.className}>
+      <body className={`${dmSans.variable} ${poppins.variable} ${dmSans.className}`}>
         <Providers>
           <LayoutWithSidebar>{children}</LayoutWithSidebar>
           <AccessibilityMenu />

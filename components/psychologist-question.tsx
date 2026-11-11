@@ -40,7 +40,7 @@ export function PsychologistQuestion({
 
     return (
       <div className="space-y-4 p-4">
-        <Label className="block text-lg text-[#0a112f]">{label}</Label>
+        <Label className="block text-lg text-brand-navy">{label}</Label>
 
         <div className="grid grid-cols-2 gap-4">
           <RadioGroup
@@ -105,7 +105,7 @@ export function PsychologistQuestion({
 
     return (
       <div className="space-y-4 p-4">
-        <Label className="block text-lg text-[#0a112f]">{label}</Label>
+        <Label className="block text-lg text-brand-navy">{label}</Label>
 
         <div className="grid grid-cols-2 gap-4">
           <RadioGroup

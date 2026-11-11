@@ -221,7 +221,7 @@ export function EditarUsuarioModal({
       <DialogContent className="max-w-4xl h-[70vh] flex flex-col p-0 gap-0">
         <div className="px-6 pt-4 pb-4 border-b">
           <div className="flex items-center justify-between">
-            <DialogTitle className="text-2xl text-[#111C4E]">
+            <DialogTitle className="text-2xl text-brand-navy">
               Editar Usuário
             </DialogTitle>
           </div>
@@ -462,7 +462,7 @@ export function EditarUsuarioModal({
             </Button>
             <Button
               onClick={handleSubmit}
-              className=" bg-[#111C4E] hover:bg-blue-800"
+              className=" bg-brand-navy hover:bg-blue-800"
             >
               Editar Usuário
             </Button>

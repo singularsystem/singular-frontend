@@ -150,7 +150,7 @@ export function SelecaoEstudanteModal({
         {/* Header */}
         <div className="px-6 pt-4 pb-4 border-b shrink-0">
           <div className="flex items-center justify-between">
-            <DialogTitle className="text-2xl text-[#111C4E]">
+            <DialogTitle className="text-2xl text-brand-navy">
               Lista de Estudantes
             </DialogTitle>
           </div>
@@ -215,7 +215,7 @@ export function SelecaoEstudanteModal({
                 {filteredStudents.length > 0 ? (
                   filteredStudents.map((aluno) => (
                     <TableRow key={aluno.id}>
-                      <TableCell className="font-medium text-[#111C4E]">
+                      <TableCell className="font-medium text-brand-navy">
                         {aluno.fullName}
                       </TableCell>
                       <TableCell className="text-gray-800">

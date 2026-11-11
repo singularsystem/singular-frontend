@@ -15,6 +15,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useAuth } from "@/contexts/auth-context";
 import { useToast } from "@/hooks/use-toast";
+import { BrandLogo } from "@/components/brand/brand-logo";
 import { Eye, EyeOff } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -156,7 +157,7 @@ export default function Login() {
         } else {
           toast({
             title: "Login realizado com sucesso",
-            description: "Bem-vindo ao Sistema AEE",
+            description: "Bem-vindo ao Singular System",
             variant: "success",
           });
 
@@ -187,10 +188,7 @@ export default function Login() {
   if (authLoading) {
     return (
       <div
-        className="flex h-screen items-center justify-center"
-        style={{
-          backgroundImage: "linear-gradient(45deg, #111C4E 11%, #0071CE)",
-        }}
+        className="flex h-screen items-center justify-center bg-brand-navy"
       >
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-white mx-auto"></div>
@@ -201,17 +199,9 @@ export default function Login() {
   }
 
   return (
-    <div
-      className="min-h-screen p-4"
-      style={{
-        backgroundImage: "linear-gradient(45deg, #111C4E 11%, #0071CE)",
-      }}
-    >
+    <div className="min-h-screen p-4 bg-brand-navy">
       <div className="w-full flex items-center justify-between pr-2 pl-2">
-        <div className="flex items-center gap-2">
-          <img src="/logo.png" alt="Logo IPAAGS" className="h-14 w-auto" />
-          <h1 className="text-2xl font-bold text-white">IPAAGS</h1>
-        </div>
+        <BrandLogo bg="dark" width={180} priority />
 
         <nav className="flex space-x-4">{/* Link opcional para home */}</nav>
       </div>
@@ -219,8 +209,8 @@ export default function Login() {
       <div className="flex items-center justify-center min-h-[calc(100vh-8rem)]">
         <Card className="w-full max-w-md shadow-[0_25px_50px_-12px_rgba(0,0,0,1.25)]">
           <CardHeader className="space-y-1 mb-5">
-            <CardTitle className="text-2xl mt-4 text-[#004f90] text-center">
-              Entrar no Sistema AEE
+            <CardTitle className="text-2xl mt-4 text-brand-navy text-center">
+              Entrar no Singular System
             </CardTitle>
             <CardDescription className="text-center text-gray-600">
               Entre na sua conta para continuar
@@ -285,7 +275,7 @@ export default function Login() {
               </div>
               <Button
                 type="submit"
-                className="w-full bg-gradient-to-r from-[#0071CE] to-[#19D3C5] text-white"
+                className="w-full bg-brand-orange hover:bg-brand-orange-dark text-brand-navy font-semibold shadow-md"
                 disabled={isLoading || authLoading}
               >
                 {isLoading ? "Entrando..." : "Entrar"}

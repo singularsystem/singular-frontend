@@ -373,7 +373,7 @@ export default function EditarEvaluationScreening({
           >
             <ArrowLeft className="h-4 w-4" />
           </Button>
-          <h1 className="text-3xl font-bold tracking-tight text-[#111C4E]">
+          <h1 className="text-3xl font-bold tracking-tight text-brand-navy">
             Editar Triagem
           </h1>
         </div>
@@ -390,7 +390,7 @@ export default function EditarEvaluationScreening({
           <CardContent className="space-y-6">
             {screeningSections.map((section) => (
               <div key={section.title} className="space-y-6">
-                <h3 className="text-xl font-semibold text-[#111C4E] border-b pb-2">
+                <h3 className="text-xl font-semibold text-brand-navy border-b pb-2">
                   {section.title}
                 </h3>
 
@@ -432,7 +432,7 @@ export default function EditarEvaluationScreening({
             <div className="mt-6 mb-20 flex justify-end">
               <Button
                 type="submit"
-                className="bg-[#111C4E] hover:bg-blue-800"
+                className="bg-brand-navy hover:bg-blue-800"
                 disabled={isLoading}
                 onClick={handleSubmit}
               >

@@ -315,7 +315,7 @@ export function CadastroUsuarioModal({
       <DialogContent className="max-w-4xl h-[80.2vh] flex flex-col p-0 gap-0">
         <div className="px-6 pt-4 pb-4 border-b">
           <div className="flex items-center justify-between">
-            <DialogTitle className="text-2xl text-[#111C4E]">
+            <DialogTitle className="text-2xl text-brand-navy">
               Cadastro de Novo Usuário
             </DialogTitle>
           </div>
@@ -631,7 +631,7 @@ export function CadastroUsuarioModal({
             </Button>
             <Button
               onClick={handleSubmit}
-              className=" bg-[#111C4E] hover:bg-blue-800"
+              className=" bg-brand-navy hover:bg-blue-800"
               disabled={isCheckingEmail || isEmailAvailable === false}
             >
               Cadastrar Usuário

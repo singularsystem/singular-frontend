@@ -43,7 +43,7 @@ export class PAEEListViewModel {
   restoreStateFromSession() {
     if (typeof window !== "undefined") {
       try {
-        const saved = sessionStorage.getItem("ipaags_paee_list_state");
+        const saved = sessionStorage.getItem("singular_paee_list_state");
         if (saved) {
           const parsed = JSON.parse(saved);
           if (parsed) {
@@ -71,7 +71,7 @@ export class PAEEListViewModel {
   private saveStateToSession() {
     if (typeof window !== "undefined") {
       try {
-        sessionStorage.setItem("ipaags_paee_list_state", JSON.stringify({
+        sessionStorage.setItem("singular_paee_list_state", JSON.stringify({
           currentPage: this.state.currentPage,
           pageSize: this.state.pageSize,
           filters: this.state.filters,

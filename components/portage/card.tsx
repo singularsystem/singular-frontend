@@ -21,13 +21,13 @@ export function PortageCard({
       <div className="flex items-center justify-between">
         <div>
           <p className="text-gray-600 text-sm font-medium mb-1">{title}</p>
-          <p className="text-3xl font-bold text-[#111C4E] mb-2">{value}</p>
+          <p className="text-3xl font-bold text-brand-navy mb-2">{value}</p>
           <div className="flex items-center space-x-1">
             <span className={`text-sm font-medium`}>{change}</span>
             <span className="text-gray-500 text-sm">{changeText}</span>
           </div>
         </div>
-        <div className="w-12 h-12 bg-gradient-to-r from-[#0071CE] to-[#19D3C5] rounded-xl flex items-center justify-center shadow-lg">
+        <div className="w-12 h-12 bg-gradient-to-r from-brand-navy-light to-brand-orange rounded-xl flex items-center justify-center shadow-lg">
           <Icon className="w-6 h-6 text-white" />
         </div>
       </div>

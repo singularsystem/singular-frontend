@@ -94,7 +94,7 @@ export function EdicaoRascunhoScreen({ bookId }: EdicaoRascunhoScreenProps) {
           <Button
             type="button"
             onClick={actions.loadDraft}
-            className="bg-[#111C4E] hover:bg-[#111C4E]/90 text-white"
+            className="bg-brand-navy hover:bg-brand-navy/90 text-white"
           >
             Tentar Novamente
           </Button>
@@ -127,7 +127,7 @@ export function EdicaoRascunhoScreen({ bookId }: EdicaoRascunhoScreenProps) {
 
       <div>
         <h1 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
-          <Edit3 className="h-7 w-7 text-[#111C4E]" />
+          <Edit3 className="h-7 w-7 text-brand-navy" />
           Revisão e Edição do Rascunho
         </h1>
         <p className="text-sm text-gray-600 mt-1">
@@ -248,7 +248,7 @@ export function EdicaoRascunhoScreen({ bookId }: EdicaoRascunhoScreenProps) {
           type="button"
           disabled={isBusy}
           onClick={handleAprovar}
-          className="bg-[#111C4E] hover:bg-[#111C4E]/90 text-white font-medium gap-2 px-6 shadow-sm"
+          className="bg-brand-navy hover:bg-brand-navy/90 text-white font-medium gap-2 px-6 shadow-sm"
         >
           {isApproving ? (
             <>

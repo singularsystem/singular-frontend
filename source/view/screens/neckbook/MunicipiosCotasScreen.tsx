@@ -74,7 +74,7 @@ export function MunicipiosCotasScreen() {
       {/* Cabeçalho e ação primária */}
       <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
         <div>
-          <h1 className="text-2xl font-bold tracking-tight text-[#111C4E]">
+          <h1 className="text-2xl font-bold tracking-tight text-brand-navy">
             Administração de Municípios &amp; Cotas (NeckBook)
           </h1>
           <p className="mt-1 text-sm text-slate-600">
@@ -86,7 +86,7 @@ export function MunicipiosCotasScreen() {
           type="button"
           onClick={handleOpenCreate}
           data-testid="open-create-municipio-button"
-          className="bg-[#111C4E] hover:bg-blue-800 text-white"
+          className="bg-brand-navy hover:bg-blue-800 text-white"
         >
           <Plus className="mr-2 h-4 w-4" />
           Novo Município

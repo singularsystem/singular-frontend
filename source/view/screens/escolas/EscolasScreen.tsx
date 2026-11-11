@@ -127,13 +127,13 @@ export function EscolasScreen() {
     <main className="flex-1 p-6 bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] overflow-hidden">
       {/* Cabeçalho */}
       <div className="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-4">
-        <h1 className="text-3xl font-bold tracking-tight text-[#111C4E]">
+        <h1 className="text-3xl font-bold tracking-tight text-brand-navy">
           Escolas
         </h1>
         {(isAdmin || isSecretary) && (
           <Button
             onClick={() => router.push("/escolas/cadastro")}
-            className="bg-[#111C4E] hover:bg-blue-800 text-white font-medium"
+            className="bg-brand-navy hover:bg-blue-800 text-white font-medium"
           >
             <Plus className="mr-2 h-4 w-4" />
             Nova Escola
@@ -179,7 +179,7 @@ export function EscolasScreen() {
               <TableHead>Diretor</TableHead>
               <TableHead>Total de Alunos</TableHead>
               <TableHead>Tipo de AEE</TableHead>
-              <TableHead className="w-[100px] text-center text-[#111C4E] font-bold">Ações</TableHead>
+              <TableHead className="w-[100px] text-center text-brand-navy font-bold">Ações</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -188,7 +188,7 @@ export function EscolasScreen() {
             ) : listState.escolas.length > 0 ? (
               listState.escolas.map((escola) => (
                 <TableRow key={escola.id}>
-                  <TableCell className="font-medium text-[#111C4E]">
+                  <TableCell className="font-medium text-brand-navy">
                     {escola.name}
                   </TableCell>
                   <TableCell className="text-gray-800">{escola.city}</TableCell>
@@ -204,9 +204,9 @@ export function EscolasScreen() {
                         <Button
                           variant="outline"
                           size="sm"
-                          className="text-[#111C4E] hover:bg-slate-50 transition-colors"
+                          className="text-brand-navy hover:bg-slate-50 transition-colors"
                         >
-                          <Badge className="mr-2 bg-[#111C4E]">
+                          <Badge className="mr-2 bg-brand-navy">
                             {escola.totalStudentsAEE || 0}
                           </Badge>
                           Ver detalhes
@@ -214,7 +214,7 @@ export function EscolasScreen() {
                       </PopoverTrigger>
                       <PopoverContent className="w-80 shadow-lg border border-slate-100 rounded-xl p-4">
                         <div className="space-y-3">
-                          <h4 className="font-semibold text-sm text-[#111C4E] leading-none">
+                          <h4 className="font-semibold text-sm text-brand-navy leading-none">
                             Alunos por tipo de deficiência
                           </h4>
                           <p className="text-xs text-muted-foreground">
@@ -233,7 +233,7 @@ export function EscolasScreen() {
                                   escola.disabilities.map((def, idx) => (
                                     <TableRow key={idx}>
                                       <TableCell className="text-xs py-2 text-slate-700">{def.tipo}</TableCell>
-                                      <TableCell className="text-right text-xs py-2 font-medium text-[#111C4E]">{def.quantidade}</TableCell>
+                                      <TableCell className="text-right text-xs py-2 font-medium text-brand-navy">{def.quantidade}</TableCell>
                                     </TableRow>
                                   ))
                                 ) : (

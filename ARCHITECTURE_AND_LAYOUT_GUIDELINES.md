@@ -1,6 +1,6 @@
 # Diretrizes de Arquitetura e Padrões de Layout Obrigatórios (Frontend)
 
-Este documento estabelece a **Constituição Arquitetural e de Layout** que deve ser obrigatoriamente aplicada a todas as telas migradas do sistema IPAAGS para o padrão **MVVM + SOLID**. O objetivo é padronizar a experiência do usuário (IHC), acelerar o desenvolvimento e eliminar retrabalhos nas próximas telas.
+Este documento estabelece a **Constituição Arquitetural e de Layout** que deve ser obrigatoriamente aplicada a todas as telas do sistema Singular System para o padrão **MVVM + SOLID**. O objetivo é padronizar a experiência do usuário (IHC), acelerar o desenvolvimento e eliminar retrabalhos nas próximas telas.
 
 ---
 

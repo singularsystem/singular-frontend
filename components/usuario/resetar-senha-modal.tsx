@@ -105,7 +105,7 @@ export function ResetarSenhaModal({
       <DialogContent className="max-w-2xl h-auto flex flex-col p-0 gap-0">
         <div className="px-6 pt-4 pb-4 border-b">
           <div className="flex items-center justify-between">
-            <DialogTitle className="text-2xl text-[#111C4E]">
+            <DialogTitle className="text-2xl text-brand-navy">
               Redefinir senha
             </DialogTitle>
           </div>
@@ -305,7 +305,7 @@ export function ResetarSenhaModal({
             <Button
               onClick={handleSubmit}
               disabled={!isFormValid}
-              className="bg-[#111C4E] hover:bg-blue-800 disabled:opacity-50"
+              className="bg-brand-navy hover:bg-blue-800 disabled:opacity-50"
             >
               Redefinir Senha
             </Button>

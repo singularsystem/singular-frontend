@@ -197,7 +197,7 @@ export default function RelatorioDetalhes({
               <ArrowLeft className="h-4 w-4 mr-2" />
               Ver Relatórios
             </Button>
-            <Button className="w-full sm:w-auto bg-[#111C4E] hover:bg-blue-800 text-white" onClick={() => router.push("/dashboard")}>
+            <Button className="w-full sm:w-auto bg-brand-navy hover:bg-blue-800 text-white" onClick={() => router.push("/dashboard")}>
               <Home className="h-4 w-4 mr-2" />
               Ir para o Início
             </Button>
@@ -230,7 +230,7 @@ export default function RelatorioDetalhes({
               <ArrowLeft className="h-4 w-4 mr-2" />
               Ver Relatórios
             </Button>
-            <Button className="w-full sm:w-auto bg-[#111C4E] hover:bg-blue-800 text-white" onClick={() => router.push("/dashboard")}>
+            <Button className="w-full sm:w-auto bg-brand-navy hover:bg-blue-800 text-white" onClick={() => router.push("/dashboard")}>
               <Home className="h-4 w-4 mr-2" />
               Ir para o Início
             </Button>
@@ -502,7 +502,7 @@ export default function RelatorioDetalhes({
                         </>
                       )}
                       <li>
-                        <strong>QUESTIONÁRIO IPAAGS (Ficha de Triagem 1.1)</strong>: Instrumento de triagem abrangente que avalia múltiplas
+                        <strong>QUESTIONÁRIO DE TRIAGEM MULTIPROFISSIONAL (Ficha de Triagem 1.1)</strong>: Instrumento de triagem abrangente que avalia múltiplas
                         áreas do desenvolvimento, incluindo linguagem, escrita,
                         leitura, raciocínio lógico, autonomia, memória, atenção
                         e interação socioemocional.
@@ -1189,7 +1189,7 @@ export default function RelatorioDetalhes({
         </CardContent>
         <CardFooter className="flex justify-between">
           <p className="text-sm text-muted-foreground">
-            Este relatório foi gerado automaticamente pelo Sistema AEE - IPAAGS
+            Este relatório foi gerado automaticamente pela Singular System
           </p>
         </CardFooter>
       </Card>

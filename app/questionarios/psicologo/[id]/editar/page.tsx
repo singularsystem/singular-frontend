@@ -310,8 +310,8 @@ export default function EditarAdaptativeDIScale({
       console.log(updated);
 
       toast({
-        title: "Questionário IPAAGS editado",
-        description: "Questionário IPAAGS foi atualizado com sucesso",
+        title: "Questionário de Triagem editado",
+        description: "Questionário de Triagem foi atualizado com sucesso",
         variant: "success",
       });
       router.push(`/relatorios/${relatorio.psychologistReport.id}/psicologo`);
@@ -346,8 +346,8 @@ export default function EditarAdaptativeDIScale({
           >
             <ArrowLeft className="h-4 w-4" />
           </Button>
-          <h1 className="text-3xl font-bold tracking-tight text-[#111C4E]">
-            Editar Questionário IPAAGS
+          <h1 className="text-3xl font-bold tracking-tight text-brand-navy">
+            Editar Questionário de Triagem
           </h1>
         </div>
       </div>
@@ -355,7 +355,7 @@ export default function EditarAdaptativeDIScale({
       <form>
         <Card>
           <CardHeader>
-            <CardTitle>Questionário IPAAGS</CardTitle>
+            <CardTitle>Questionário de Triagem</CardTitle>
             <CardDescription>
               Preencha as informações da avaliação
             </CardDescription>
@@ -368,7 +368,7 @@ export default function EditarAdaptativeDIScale({
               )
               .map((section) => (
                 <div key={section.title} className="space-y-6">
-                  <h3 className="text-xl font-semibold text-[#111C4E] border-b pb-2">
+                  <h3 className="text-xl font-semibold text-brand-navy border-b pb-2">
                     {section.title}
                   </h3>
 
@@ -411,7 +411,7 @@ export default function EditarAdaptativeDIScale({
             <div className="mt-6 mb-20 flex justify-end">
               <Button
                 type="submit"
-                className="bg-[#111C4E] hover:bg-blue-800"
+                className="bg-brand-navy hover:bg-blue-800"
                 disabled={isLoading}
                 onClick={handleSubmit}
               >

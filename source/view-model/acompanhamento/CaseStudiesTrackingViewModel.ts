@@ -45,7 +45,7 @@ export class CaseStudiesTrackingViewModel {
   restoreStateFromSession() {
     if (typeof window !== "undefined") {
       try {
-        const saved = sessionStorage.getItem("ipaags_case_studies_tracking_state");
+        const saved = sessionStorage.getItem("singular_case_studies_tracking_state");
         if (saved) {
           const parsed = JSON.parse(saved);
           if (parsed) {
@@ -65,7 +65,7 @@ export class CaseStudiesTrackingViewModel {
     if (typeof window !== "undefined") {
       try {
         sessionStorage.setItem(
-          "ipaags_case_studies_tracking_state",
+          "singular_case_studies_tracking_state",
           JSON.stringify({
             currentPage: this.state.currentPage,
             pageSize: this.state.pageSize,

@@ -103,7 +103,7 @@ export function Combobox({
                 >
                   <Check
                     className={cn(
-                      "mr-2 h-4 w-4 text-[#111C4E]",
+                      "mr-2 h-4 w-4 text-brand-navy",
                       value === option.value ? "opacity-100" : "opacity-0"
                     )}
                   />

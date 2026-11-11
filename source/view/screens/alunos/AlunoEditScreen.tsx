@@ -96,7 +96,7 @@ export function AlunoEditScreen({ id }: AlunoEditScreenProps) {
   if (state.isFetching) {
     return (
       <main className="flex-1 p-6 text-center">
-        <p className="text-muted-foreground animate-pulse text-lg text-[#111C4E]">Carregando dados do aluno...</p>
+        <p className="text-muted-foreground animate-pulse text-lg text-brand-navy">Carregando dados do aluno...</p>
       </main>
     );
   }
@@ -109,7 +109,7 @@ export function AlunoEditScreen({ id }: AlunoEditScreenProps) {
             <ArrowLeft className="h-5 w-5" />
           </Button>
           <div>
-            <h1 className="text-3xl font-bold tracking-tight text-[#111C4E]">Editar Aluno</h1>
+            <h1 className="text-3xl font-bold tracking-tight text-brand-navy">Editar Aluno</h1>
             <p className="text-muted-foreground">Atualize as informações do aluno abaixo.</p>
           </div>
         </div>
@@ -417,7 +417,7 @@ export function AlunoEditScreen({ id }: AlunoEditScreenProps) {
             type="submit"
             form="edicao-aluno-form"
             size="lg"
-            className="bg-[#111C4E] hover:bg-blue-800 px-8 shadow-md"
+            className="bg-brand-navy hover:bg-blue-800 px-8 shadow-md"
             disabled={state.isLoading}
           >
             {state.isLoading ? "Salvando..." : "Salvar Alterações"}

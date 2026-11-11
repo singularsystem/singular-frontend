@@ -18,7 +18,21 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        // Manual de Identidade Visual: DM Sans (textos/interface) e Poppins (títulos/chamadas)
+        sans: ["var(--font-dm-sans)", "system-ui", "sans-serif"],
+        heading: ["var(--font-poppins)", "system-ui", "sans-serif"],
+      },
       colors: {
+        // Paleta oficial Singular System
+        brand: {
+          navy: "#111E42",
+          "navy-light": "#1E3E62",
+          orange: "#FF7623",
+          "orange-dark": "#E5651A",
+          ice: "#F5F7FB",
+          link: "#C2410C",
+        },
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {

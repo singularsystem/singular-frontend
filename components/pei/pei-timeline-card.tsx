@@ -100,7 +100,7 @@ export function PEITimelineCard({
       <CardContent className="pt-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
           <div className="flex flex-col items-center bg-blue-200 px-10 py-8 rounded-md">
-            <p className="text-3xl font-semibold text-[#111C4E]">
+            <p className="text-3xl font-semibold text-brand-navy">
               {resumo.total}
             </p>
             <p className="text-gray-500">Total de Questões</p>

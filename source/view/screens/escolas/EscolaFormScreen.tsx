@@ -153,7 +153,7 @@ export function EscolaFormScreen({ id }: EscolaFormScreenProps) {
         <div className="flex items-center justify-between mb-6">
           <div>
             <span className="text-xs font-semibold uppercase tracking-wider text-slate-400">Escolas</span>
-            <h1 className="text-3xl font-bold tracking-tight text-[#111C4E]">
+            <h1 className="text-3xl font-bold tracking-tight text-brand-navy">
               {isEdit ? "Editar Escola" : "Cadastro de Escola"}
             </h1>
           </div>
@@ -168,7 +168,7 @@ export function EscolaFormScreen({ id }: EscolaFormScreenProps) {
 
         <Card className="shadow-sm border border-slate-100 rounded-2xl bg-white overflow-hidden">
           <CardHeader className="p-8 border-b border-slate-50">
-            <CardTitle className="text-lg font-bold text-[#111C4E]">Informações da Escola</CardTitle>
+            <CardTitle className="text-lg font-bold text-brand-navy">Informações da Escola</CardTitle>
             <CardDescription className="text-slate-500 text-sm">
               {isEdit
                 ? "Atualize as informações cadastrais e responsáveis da instituição."
@@ -271,7 +271,7 @@ export function EscolaFormScreen({ id }: EscolaFormScreenProps) {
             <Button
               type="submit"
               form="escola-form"
-              className="bg-[#111C4E] hover:bg-blue-800 text-white font-medium rounded-xl h-11 px-6 flex items-center gap-2"
+              className="bg-brand-navy hover:bg-blue-800 text-white font-medium rounded-xl h-11 px-6 flex items-center gap-2"
               disabled={formState.isSaving}
             >
               {formState.isSaving ? (

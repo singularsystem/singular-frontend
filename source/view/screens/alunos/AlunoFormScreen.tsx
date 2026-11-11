@@ -92,7 +92,7 @@ export function AlunoFormScreen() {
             <ArrowLeft className="h-5 w-5" />
           </Button>
           <div>
-            <h1 className="text-3xl font-bold tracking-tight text-[#111C4E]">Cadastro de Aluno</h1>
+            <h1 className="text-3xl font-bold tracking-tight text-brand-navy">Cadastro de Aluno</h1>
             <p className="text-muted-foreground">Preencha todas as informações abaixo para registrar o novo aluno.</p>
           </div>
         </div>
@@ -389,7 +389,7 @@ export function AlunoFormScreen() {
             type="submit"
             form="cadastro-aluno-form"
             size="lg"
-            className="bg-[#111C4E] hover:bg-blue-800 px-8 shadow-md text-white"
+            className="bg-brand-navy hover:bg-blue-800 px-8 shadow-md text-white"
             disabled={state.isLoading}
           >
             {state.isLoading ? "Cadastrando..." : "Finalizar Cadastro"}

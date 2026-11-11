@@ -15,6 +15,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import { BrandLogo } from "@/components/brand/brand-logo";
 import { AlertCircle, ArrowLeft, CheckCircle2, Mail } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -69,7 +70,7 @@ export default function RecuperarSenha() {
       <Card className="w-full max-w-md">
         <CardHeader className="space-y-1">
           <div className="flex justify-center mb-4">
-            <img src="/logo.png" alt="Logo IPAAGS" className="h-12 w-auto" />
+            <BrandLogo bg="light" width={180} priority />
           </div>
           <CardTitle className="text-2xl text-center">
             Recuperação de Senha
@@ -136,8 +137,7 @@ export default function RecuperarSenha() {
             </Button>
           </div>
           <div className="text-center text-xs text-gray-500">
-            © {new Date().getFullYear()} Instituto Piauiense de Assistência,
-            Auditoria e Gestão em Saúde
+            © {new Date().getFullYear()} Singular System
           </div>
         </CardFooter>
       </Card>
@@ -150,13 +150,13 @@ export default function RecuperarSenha() {
             <h3 className="font-medium">Simulação do Email Enviado</h3>
           </div>
           <div className="text-sm text-gray-700 space-y-2">
-            <p>Assunto: Recuperação de Senha - Sistema AEE</p>
+            <p>Assunto: Recuperação de Senha - Singular System</p>
             <p>Para: {email}</p>
             <div className="border-t pt-2 mt-2">
               <p>Olá,</p>
               <p className="my-2">
-                Recebemos uma solicitação para redefinir sua senha no Sistema
-                AEE.
+                Recebemos uma solicitação para redefinir sua senha no Singular
+                System.
               </p>
               <div className="bg-blue-50 p-2 rounded my-2 text-center">
                 <Link
@@ -170,7 +170,7 @@ export default function RecuperarSenha() {
                 Se você não solicitou esta alteração, ignore este email.
               </p>
               <p>Atenciosamente,</p>
-              <p>Equipe IPAAGS</p>
+              <p>Equipe Singular System</p>
             </div>
           </div>
         </div>

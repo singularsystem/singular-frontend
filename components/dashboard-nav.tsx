@@ -26,6 +26,7 @@ import {
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { SidebarNavItem } from "./sidebar-nav-item";
+import { BrandLogo } from "@/components/brand/brand-logo";
 import { toast } from "./ui/use-toast";
 
 interface DashboardNavProps {
@@ -299,15 +300,21 @@ export function DashboardNav({ isCollapsed, onToggle }: DashboardNavProps) {
   return (
     <div
       className={cn(
-        "bg-[#111C4E] text-white flex flex-col relative flex-shrink-0 transition-all duration-300 ease-in-out",
+        "bg-brand-navy text-white flex flex-col relative flex-shrink-0 transition-all duration-300 ease-in-out",
         isCollapsed ? "w-20" : "w-80",
       )}
     >
       <div className="p-4 border-b border-white/10">
-        <div className="flex flex-col items-center justify-between">
+        <div className="flex items-center justify-between gap-2 overflow-hidden">
+          <BrandLogo
+            bg="dark"
+            width={isCollapsed ? 36 : 140}
+            variant={isCollapsed ? "symbol-orange" : "horizontal-white"}
+          />
           <button
             onClick={onToggle}
-            className="p-2 rounded-lg hover:bg-white/10 transition-colors duration-600 self-end"
+            className="p-2 rounded-lg hover:bg-white/10 transition-colors duration-200 shrink-0"
+            aria-label={isCollapsed ? "Expandir menu" : "Recolher menu"}
           >
             {isCollapsed ? (
               <ChevronRight className="w-5 h-5" />

@@ -32,7 +32,7 @@ export function SeletorModoGeracao({
           className={cn(
             "p-3.5 rounded-lg border text-left transition-all relative flex flex-col justify-between",
             value === "full_auto"
-              ? "border-[#111C4E] bg-blue-50/50 ring-1 ring-[#111C4E]"
+              ? "border-brand-navy bg-blue-50/50 ring-1 ring-brand-navy"
               : "border-gray-200 hover:border-gray-300 bg-white",
             disabled && "cursor-not-allowed opacity-60",
             error && !value && "border-red-500",
@@ -55,7 +55,7 @@ export function SeletorModoGeracao({
           className={cn(
             "p-3.5 rounded-lg border text-left transition-all relative flex flex-col justify-between",
             value === "draft_first"
-              ? "border-[#111C4E] bg-blue-50/50 ring-1 ring-[#111C4E]"
+              ? "border-brand-navy bg-blue-50/50 ring-1 ring-brand-navy"
               : "border-gray-200 hover:border-gray-300 bg-white",
             disabled && "cursor-not-allowed opacity-60",
             error && !value && "border-red-500",

@@ -18,6 +18,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Eye, EyeOff, Loader2, Lock, Save } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { ProfessionalProfileSection } from "@/components/perfil/professional-profile-section";
 
 export default function Perfil() {
   const router = useRouter();
@@ -251,7 +252,7 @@ export default function Perfil() {
     return (
       <main className="flex-1 p-6">
         <div className="flex items-center justify-between mb-6">
-          <h1 className="text-3xl font-bold tracking-tight text-[#111C4E]">
+          <h1 className="text-3xl font-bold tracking-tight text-brand-navy">
             Perfil não encontrado
           </h1>
         </div>
@@ -262,7 +263,7 @@ export default function Perfil() {
   return (
     <main className="flex-1 p-6">
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-3xl font-bold tracking-tight text-[#111C4E]">
+        <h1 className="text-3xl font-bold tracking-tight text-brand-navy">
           Meu Perfil
         </h1>
       </div>
@@ -279,7 +280,7 @@ export default function Perfil() {
             <CardContent className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <Label className="text-[#111C4E]" htmlFor="fullName">
+                  <Label className="text-brand-navy" htmlFor="fullName">
                     Nome Completo
                   </Label>
                   <Input
@@ -291,7 +292,7 @@ export default function Perfil() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label className="text-[#111C4E]" htmlFor="email">
+                  <Label className="text-brand-navy" htmlFor="email">
                     Email
                   </Label>
                   <Input
@@ -306,7 +307,7 @@ export default function Perfil() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <Label className="text-[#111C4E]" htmlFor="sex">
+                  <Label className="text-brand-navy" htmlFor="sex">
                     Sexo
                   </Label>
                   <Input
@@ -323,7 +324,7 @@ export default function Perfil() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label className="text-[#111C4E]" htmlFor="dateOfBirth">
+                  <Label className="text-brand-navy" htmlFor="dateOfBirth">
                     Data de Nascimento
                   </Label>
                   <Input
@@ -336,7 +337,7 @@ export default function Perfil() {
               </div>
 
               <div className="space-y-2">
-                <Label className="text-[#111C4E]" htmlFor="address">
+                <Label className="text-brand-navy" htmlFor="address">
                   Endereço
                 </Label>
                 <Input
@@ -350,7 +351,7 @@ export default function Perfil() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <Label className="text-[#111C4E]" htmlFor="city">
+                  <Label className="text-brand-navy" htmlFor="city">
                     Município
                   </Label>
                   <Input
@@ -362,7 +363,7 @@ export default function Perfil() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label className="text-[#111C4E]" htmlFor="userName">
+                  <Label className="text-brand-navy" htmlFor="userName">
                     Perfil
                   </Label>
                   <Input
@@ -376,7 +377,7 @@ export default function Perfil() {
 
               {user.schoolName && (
                 <div className="space-y-2">
-                  <Label className="text-[#111C4E]" htmlFor="schoolName">
+                  <Label className="text-brand-navy" htmlFor="schoolName">
                     Unidade Escolar
                   </Label>
                   <Input
@@ -493,7 +494,7 @@ export default function Perfil() {
               <Button
                 type="submit"
                 disabled={isLoading || authLoading}
-                className="gap-2 bg-gradient-to-r from-[#0071CE] to-[#19D3C5]"
+                className="gap-2 bg-gradient-to-r from-brand-navy-light to-brand-orange"
               >
                 {isLoading ? (
                   <>
@@ -520,11 +521,11 @@ export default function Perfil() {
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="space-y-1">
-              <p className="text-sm font-medium text-[#111C4E]">Perfil</p>
+              <p className="text-sm font-medium text-brand-navy">Perfil</p>
               <p className="text-sm text-muted-foreground">{user.userName}</p>
             </div>
             <div className="space-y-1">
-              <p className="text-sm font-medium text-[#111C4E]">
+              <p className="text-sm font-medium text-brand-navy">
                 Último Acesso
               </p>
               <p className="text-sm text-muted-foreground">
@@ -532,7 +533,7 @@ export default function Perfil() {
               </p>
             </div>
             <div className="space-y-1">
-              <p className="text-sm font-medium text-[#111C4E]">
+              <p className="text-sm font-medium text-brand-navy">
                 Status da Conta
               </p>
               <div className="flex items-center">
@@ -551,13 +552,15 @@ export default function Perfil() {
             {user.roles?.[0]?.toLowerCase() === "admin" && (
               <div className="mt-6 p-3 bg-blue-50 rounded-md">
                 <p className="text-sm text-blue-700">
-                  <strong>Nota:</strong> Como usuário Suporte IPAAGS, você tem
+                  <strong>Nota:</strong> Como usuário Administrador do Singular System, você tem
                   permissão para editar todos os campos do perfil.
                 </p>
               </div>
             )}
           </CardContent>
         </Card>
+
+        <ProfessionalProfileSection token={token} />
       </div>
     </main>
   );

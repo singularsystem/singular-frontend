@@ -21,7 +21,7 @@ export function CheckboxSuporteCaa({
         checked={checked}
         onCheckedChange={(c) => onCheckedChange(Boolean(c))}
         disabled={disabled}
-        className="mt-0.5 data-[state=checked]:bg-[#111C4E] data-[state=checked]:border-[#111C4E]"
+        className="mt-0.5 data-[state=checked]:bg-brand-navy data-[state=checked]:border-brand-navy"
       />
       <div className="grid gap-1 leading-none">
         <Label

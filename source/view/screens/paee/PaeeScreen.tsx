@@ -236,7 +236,7 @@ export function PaeeScreen() {
   return (
     <main className="flex-1 p-6 bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] overflow-hidden">
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-3xl font-bold tracking-tight text-[#111C4E]">
+        <h1 className="text-3xl font-bold tracking-tight text-brand-navy">
           PAEE
         </h1>
         <div className="flex gap-2">
@@ -249,7 +249,7 @@ export function PaeeScreen() {
           {isTeacher && (
             <Button
               onClick={() => setOpenSelecaoStudents(true)}
-              className="bg-[#111C4E] hover:bg-blue-800 text-white"
+              className="bg-brand-navy hover:bg-blue-800 text-white"
               disabled={state.isLoading}
             >
               <Plus className="mr-2 h-4 w-4" />
@@ -273,7 +273,7 @@ export function PaeeScreen() {
               }}
               className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
                 !state.filters.onlyMyDocs && !state.filters.onlyMyReports
-                  ? "bg-[#111C4E] text-white shadow-sm"
+                  ? "bg-brand-navy text-white shadow-sm"
                   : "bg-slate-100 text-slate-600 hover:bg-slate-200"
               }`}
             >
@@ -291,7 +291,7 @@ export function PaeeScreen() {
               }}
               className={`px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2 transition-all ${
                 state.filters.onlyMyDocs || state.filters.onlyMyReports
-                  ? "bg-[#111C4E] text-white shadow-sm"
+                  ? "bg-brand-navy text-white shadow-sm"
                   : "bg-slate-100 text-slate-600 hover:bg-slate-200"
               }`}
             >
@@ -300,8 +300,8 @@ export function PaeeScreen() {
                 <span
                   className={`text-xs px-2 py-0.5 rounded-full font-bold ${
                     state.filters.onlyMyDocs || state.filters.onlyMyReports
-                      ? "bg-white text-[#111C4E]"
-                      : "bg-[#111C4E] text-white"
+                      ? "bg-white text-brand-navy"
+                      : "bg-brand-navy text-white"
                   }`}
                 >
                   {mySummary.total}
@@ -415,7 +415,7 @@ export function PaeeScreen() {
         </div>
         <div className="text-sm text-gray-600 whitespace-nowrap">
           PAEEs encontrados:{" "}
-          <span className="font-semibold text-[#111C4E]">
+          <span className="font-semibold text-brand-navy">
             {state.uniqueTotal ?? 0}
           </span>
         </div>

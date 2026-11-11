@@ -157,7 +157,7 @@ export function MunicipiosTable({
                           title="Visualizar chaves de API"
                           aria-label={`Visualizar chaves de API de ${mun.name}`}
                           data-testid={`action-view-keys-${mun.id}`}
-                          className="h-8 w-8 rounded-full text-slate-600 hover:bg-slate-100 hover:text-[#111C4E]"
+                          className="h-8 w-8 rounded-full text-slate-600 hover:bg-slate-100 hover:text-brand-navy"
                         >
                           <Eye className="h-4 w-4" />
                         </Button>
@@ -169,7 +169,7 @@ export function MunicipiosTable({
                           title="Editar cota e status"
                           aria-label={`Editar ${mun.name}`}
                           data-testid={`action-edit-${mun.id}`}
-                          className="h-8 w-8 rounded-full text-slate-600 hover:bg-slate-100 hover:text-[#111C4E]"
+                          className="h-8 w-8 rounded-full text-slate-600 hover:bg-slate-100 hover:text-brand-navy"
                         >
                           <Pencil className="h-4 w-4" />
                         </Button>
@@ -181,7 +181,7 @@ export function MunicipiosTable({
                           title="Gerar nova chave de API"
                           aria-label={`Gerar chave de API para ${mun.name}`}
                           data-testid={`action-generate-key-${mun.id}`}
-                          className="h-8 w-8 rounded-full text-slate-600 hover:bg-slate-100 hover:text-[#111C4E]"
+                          className="h-8 w-8 rounded-full text-slate-600 hover:bg-slate-100 hover:text-brand-navy"
                         >
                           <KeyRound className="h-4 w-4" />
                         </Button>
