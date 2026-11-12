@@ -93,11 +93,32 @@ export function ReportSignaturesCard({
 }: ReportSignaturesCardProps) {
   const cutoffDate = new Date('2026-08-18T00:00:00Z');
   const isBeforeCutoff = createdAt ? new Date(createdAt) < cutoffDate : false;
+  const docStatusLower = documentStatus?.toLowerCase() ?? "";
+  const repStatusLower = reportStatus?.toLowerCase() ?? "";
   const isDocComplete =
-    reportStatus?.toLowerCase().includes('complet') ||
-    documentStatus?.toLowerCase().includes('complet') ||
+    repStatusLower.includes('complet') ||
+    docStatusLower.includes('complet') ||
     false;
-  const isLegacyCompleted = (signatureBlocked || isBeforeCutoff) && isDocComplete;
+
+  const hasSwSigned = !!socialWorkerSignedAt || !!socialWorkerSign;
+  const hasPsySigned = !!psychologistSignedAt || !!psychologistSign;
+  const hasPpSigned = !!psychopedagogueSignedAt || !!psychopedagogueSign;
+  const isEnvelopeComplete =
+    docStatusLower.includes('complet') ||
+    (hasSwSigned && hasPsySigned && hasPpSigned);
+
+  // Se o relatório já está no fluxo de assinatura digital (tem token ou assinaturas parciais)
+  // e ainda não concluiu todas as 3 assinaturas nem foi bloqueado, não deve marcar todos como "Assinado" por legado
+  const hasActiveSignatureFlow =
+    !signatureBlocked &&
+    !isEnvelopeComplete &&
+    (!!documentToken || hasSwSigned || hasPsySigned || hasPpSigned);
+
+  const isLegacyCompleted =
+    isDocComplete &&
+    (!!signatureBlocked ||
+      isEnvelopeComplete ||
+      (isBeforeCutoff && !hasActiveSignatureFlow));
   const { openSignedDocument, isGeneratingPDF } = useFetchSignedDoc();
   const { toast } = useToast();
 
@@ -134,11 +155,8 @@ export function ReportSignaturesCard({
   };
 
   const isFullySignedOrBlocked =
-    (signatureBlocked && isDocComplete) ||
-    (isDocComplete &&
-      ((!!psychopedagogueSignedAt || !!psychopedagogueSign) &&
-       (!!psychologistSignedAt || !!psychologistSign) &&
-       (!!socialWorkerSignedAt || !!socialWorkerSign)));
+    isLegacyCompleted ||
+    (isDocComplete && hasSwSigned && hasPsySigned && hasPpSigned);
 
   const isLoading = isGeneratingPDF || isDownloadingPdf;
 
@@ -199,7 +217,7 @@ export function ReportSignaturesCard({
             </p>
           ) : null}
 
-          {documentStatus === "Em Andamento" ? (
+          {!isFullySignedOrBlocked && documentStatus === "Em Andamento" ? (
             <p className="text-xs text-yellow-600">
               Aguardando a conclusão de todos os profissionais para finalizar o
               relatório.

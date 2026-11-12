@@ -295,25 +295,56 @@ export default function RelatoriosPage() {
     let hasSigned = false;
     let isMyPartFilled = false;
 
+    const hasSwSigned =
+      !!relatorio.socialWorkerSign || !!relatorio.socialWorkerSignedAt;
+    const hasPsySigned =
+      !!relatorio.psychologistSign || !!relatorio.psychologistSignedAt;
+    const hasPpSigned =
+      !!relatorio.psychopedagogueSign || !!relatorio.psychopedagogueSignedAt;
+
     if (role === "psychologist") {
-      hasSigned = relatorio.psychologistSign;
-      isMyPartFilled = !!(relatorio.psychologistReport?.unifiedAt || (relatorio.psychologistReport?.conclusion && relatorio.psychologistReport?.conclusion.trim().length > 0));
+      hasSigned = hasPsySigned;
+      isMyPartFilled = !!(
+        relatorio.psychologistReport?.unifiedAt &&
+        relatorio.psychologistReport?.conclusion &&
+        relatorio.psychologistReport?.conclusion.trim().length > 0
+      );
     } else if (role === "psychopedagogue") {
-      hasSigned = relatorio.psychopedagogueSign;
-      isMyPartFilled = !!(relatorio.psychopedagogueReport?.unifiedAt || (relatorio.psychopedagogueReport?.conclusion && relatorio.psychopedagogueReport?.conclusion.trim().length > 0));
+      hasSigned = hasPpSigned;
+      isMyPartFilled = !!(
+        relatorio.psychopedagogueReport?.unifiedAt &&
+        relatorio.psychopedagogueReport?.conclusion &&
+        relatorio.psychopedagogueReport?.conclusion.trim().length > 0
+      );
     } else if (role === "socialwork") {
-      hasSigned = relatorio.socialWorkerSign;
-      isMyPartFilled = !!(relatorio.socialWorkerReport && relatorio.socialWorkerReport.conclusion && relatorio.socialWorkerReport.conclusion.trim().length > 0);
+      hasSigned = hasSwSigned;
+      isMyPartFilled = !!(
+        relatorio.socialWorkerReport &&
+        relatorio.socialWorkerReport.conclusion &&
+        relatorio.socialWorkerReport.conclusion.trim().length > 0
+      );
     } else if (role === "admin") {
-      hasSigned = relatorio.psychologistSign && relatorio.psychopedagogueSign && relatorio.socialWorkerSign;
+      hasSigned = hasPsySigned && hasPpSigned && hasSwSigned;
       isMyPartFilled = relatorio.status === "Completo";
     }
 
+    const reportDateStr = relatorio.reportCreatedAt || relatorio.createdAt;
+    const isEnvelopeComplete =
+      (relatorio.documentStatus?.toLowerCase().includes("complet") ?? false) ||
+      (hasSwSigned && hasPsySigned && hasPpSigned);
+    const hasActiveSignatureFlow =
+      !relatorio.signatureBlocked &&
+      !isEnvelopeComplete &&
+      (!!relatorio.documentToken || hasSwSigned || hasPsySigned || hasPpSigned);
+
     const isLegacyCompleted =
       (relatorio.signatureBlocked ||
-        (relatorio.createdAt && new Date(relatorio.createdAt) < new Date("2026-08-18T00:00:00Z"))) &&
+        isEnvelopeComplete ||
+        (!hasActiveSignatureFlow &&
+          !!reportDateStr &&
+          new Date(reportDateStr) < new Date("2026-08-18T00:00:00Z"))) &&
       (relatorio.status?.toLowerCase() === "completo" ||
-        relatorio.documentStatus?.toLowerCase() === "completo" ||
+        isEnvelopeComplete ||
         !!relatorio.unifiedAt);
 
     if (isLegacyCompleted) {
@@ -860,12 +891,32 @@ export default function RelatoriosPage() {
                           ? "bg-green-500 text-white"
                           : "bg-yellow-500 text-black";
 
+                      const reportDateStr =
+                        relatorio.reportCreatedAt || relatorio.createdAt;
+                      const isBeforeCutoff = reportDateStr
+                        ? new Date(reportDateStr) <
+                          new Date("2026-08-18T00:00:00Z")
+                        : false;
+                      const isEnvelopeComplete =
+                        (relatorio.documentStatus
+                          ?.toLowerCase()
+                          .includes("complet") ??
+                          false) ||
+                        (psychologistSigned &&
+                          psychopedagogueSigned &&
+                          socialWorkerSigned);
+                      const hasActiveSignatureFlow =
+                        !relatorio.signatureBlocked &&
+                        !isEnvelopeComplete &&
+                        (!!relatorio.documentToken ||
+                          psychologistSigned ||
+                          psychopedagogueSigned ||
+                          socialWorkerSigned);
+
                       const fullySigned =
                         isReportComplete &&
-                        ((psychologistSigned &&
-                          psychopedagogueSigned &&
-                          socialWorkerSigned) ||
-                          relatorio.documentStatus?.toLowerCase().includes("complet"));
+                        (isEnvelopeComplete ||
+                          (isBeforeCutoff && !hasActiveSignatureFlow));
 
                       return (
                         <div className="flex flex-col gap-1 w-fit">

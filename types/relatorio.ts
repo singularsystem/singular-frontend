@@ -19,6 +19,8 @@ export interface Relatorio {
   typeOfDisability: string;
   createdAt: string;
   localCreatedAt: string;
+  reportCreatedAt?: string | null;
+  localReportCreatedAt?: string | null;
   updatedAt: string | null;
   LocalUpdatedAt: string | null;
   unifiedAt: string | null;
@@ -51,6 +53,8 @@ export interface RelatorioPsicologico {
   conclusion: string | null;
   createdAt: string;
   localCreatedAt: string;
+  reportCreatedAt?: string | null;
+  localReportCreatedAt?: string | null;
   updatedAt: string | null;
   LocalUpdatedAt: string | null;
   unifiedAt: string | null;
@@ -74,6 +78,8 @@ export interface RelatorioAssistenteSocial {
   recommendations: string;
   createdAt: string;
   localCreatedAt: string;
+  reportCreatedAt?: string | null;
+  localReportCreatedAt?: string | null;
   updatedAt: string | null;
   localUpdatedAt: string | null;
 }
@@ -90,6 +96,8 @@ export interface RelatorioPsicopedagogico {
   conclusion: string | null;
   createdAt: string;
   localCreatedAt: string;
+  reportCreatedAt?: string | null;
+  localReportCreatedAt?: string | null;
   updatedAt: string | null;
   LocalUpdatedAt: string | null;
   unifiedAt: string | null;

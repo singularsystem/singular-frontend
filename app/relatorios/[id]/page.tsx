@@ -299,11 +299,19 @@ export default function RelatorioDetalhes({
             isPrinting={isPrinting}
             isGeneratingPDF={isGeneratingPDF}
             isSigning={isLoading}
-            canSign={canAssinar && !!relatorio?.documentToken}
+            canSign={canAssinar && !!relatorio?.documentToken && !relatorio?.signatureBlocked}
             isSigned={
-              relatorio?.socialWorkerSign &&
-              relatorio.psychologistSign &&
-              relatorio.psychopedagogueSign
+              user?.roles?.[0]?.toLowerCase() === "socialwork"
+                ? !!relatorio?.socialWorkerSign || !!relatorio?.socialWorkerSignedAt
+                : user?.roles?.[0]?.toLowerCase() === "psychologist"
+                  ? !!relatorio?.psychologistSign || !!relatorio?.psychologistSignedAt
+                  : user?.roles?.[0]?.toLowerCase() === "psychopedagogue"
+                    ? !!relatorio?.psychopedagogueSign || !!relatorio?.psychopedagogueSignedAt
+                    : !!(
+                        relatorio?.socialWorkerSign &&
+                        relatorio.psychologistSign &&
+                        relatorio.psychopedagogueSign
+                      )
             }
             onSign={handleAssinar}
           />
@@ -396,7 +404,7 @@ export default function RelatorioDetalhes({
           documentStatus={relatorio?.documentStatus}
           reportStatus={relatorio?.status}
           signatureBlocked={relatorio?.signatureBlocked}
-          createdAt={relatorio?.createdAt || relatorio?.localCreatedAt}
+          createdAt={relatorio?.reportCreatedAt || relatorio?.createdAt}
           onDownloadPdf={async () => {
             if (relatorio?.id) {
               await downloadDocumentPdf(relatorio.id);
