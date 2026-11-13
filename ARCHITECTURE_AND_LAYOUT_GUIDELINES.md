@@ -25,6 +25,23 @@ source/
 
 Todas as telas de listagem e formulários do sistema devem aderir aos seguintes padrões visuais e comportamentais durante a migração:
 
+### 2.0 Paleta de Marca (tokens obrigatórios)
+* **Regra**: cores de marca vêm dos tokens do Tailwind (`tailwind.config.ts`) e das variáveis CSS (`app/globals.css`), conforme o Manual de Identidade Visual. É proibido usar hex solto (`bg-[#...]`) para cores de marca.
+* **Tokens**:
+
+  | Token | Hex | Uso |
+  |---|---|---|
+  | `brand-navy` | `#111E42` | Cor principal: botão primário, títulos, textos de destaque (`bg-primary` e `text-primary` apontam para ela) |
+  | `brand-navy-light` | `#1E3E62` | Apoio: gradientes, estados secundários |
+  | `brand-orange` | `#FF7623` | Destaque e chamadas de ação (CTA) |
+  | `brand-orange-dark` | `#E5651A` | Hover do laranja |
+  | `brand-ice` | `#F5F7FB` | Fundos de página e cartões |
+  | `brand-link` | `#C2410C` | Link de texto sobre fundo claro |
+
+* **Contraste**: texto branco sobre `brand-orange` fica abaixo do mínimo AA (cerca de 2,7:1). Em botões laranja use texto `brand-navy` (cerca de 6,1:1).
+* **Cores semânticas de ação** (ver 2.6: azul, âmbar e vermelho) e `destructive` seguem como estão.
+* **Paleta legada** (`#111C4E`, `#0071CE`, `#19D3C5`, `#0a112f`) não deve reaparecer em nenhum arquivo.
+
 ### 2.1 Preservação de Estado da Tela (`sessionStorage`)
 * **Regra**: Nenhuma listagem deve perder o progresso do usuário ao navegar para telas de detalhes/edição e voltar.
 * **Implementação**:
@@ -55,7 +72,8 @@ Todas as telas de listagem e formulários do sistema devem aderir aos seguintes 
 
 ### 2.3 Padronização de Botões e Espaçamentos (IHC)
 * **Botão de Conversão Principal ("Novo Aluno", "Nova Escola")**:
-  - Deve ser preenchido (`bg-[#111C4E] hover:bg-blue-800 text-white`) e posicionado **sempre no extremo direito** da barra de ações superior.
+  - Deve ser preenchido (`bg-brand-navy hover:bg-blue-800 text-white`, padrão já usado em `AlunosScreen`, `EscolasScreen` e `app/usuarios`) e posicionado **sempre no extremo direito** da barra de ações superior.
+  - **Nunca** usar o hex da paleta antiga (`#111C4E`) nem cores arbitrárias `[#hex]` para a marca: use sempre os tokens da seção 2.0.
 * **Botões Secundários ("Exportar PDF", "Imprimir", "Baixar Modelo")**:
   - Devem ser desenhados no padrão Outline (`variant="outline"`) e agrupados à esquerda do botão de conversão principal, com espaçamento constante (`gap-2`).
 * **Respiro Visual (Escala de 8px)**:
