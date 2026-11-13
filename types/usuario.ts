@@ -22,6 +22,10 @@ export interface Usuario {
   localCreatedAt: string;
   updatedAt: string | null;
   localUpdatedAt: string | null;
+  planType?: 'Standard' | 'Golden' | 'Empresa' | 'Publico';
+  planStatus?: 'Active' | 'PastDue' | 'Suspended' | 'Cancelled';
+  quotaDocuments?: number;
+  quotaUsed?: number;
 }
 
 export type AuthUser = Pick<
@@ -44,6 +48,10 @@ export type AuthUser = Pick<
   | "mustChangePassword"
   | "localLastLogin"
   | "formattedDateOfBirth"
+  | "planType"
+  | "planStatus"
+  | "quotaDocuments"
+  | "quotaUsed"
 >;
 
 export interface ProfessionalSummary {

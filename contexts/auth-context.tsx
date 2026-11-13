@@ -110,6 +110,10 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
           mustChangePassword: result.data.mustChangePassword,
           localLastLogin: result.data.localLastLogin,
           formattedDateOfBirth: result.data.formattedDateOfBirth,
+          planType: result.data.planType,
+          planStatus: result.data.planStatus,
+          quotaDocuments: result.data.quotaDocuments,
+          quotaUsed: result.data.quotaUsed,
         });
         return true;
       } catch (error) {
